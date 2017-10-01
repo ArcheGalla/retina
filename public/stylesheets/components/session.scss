@@ -1,0 +1,28 @@
+.session {
+  background: url("/assets/images/retina/bg_session.png") repeat-x;
+  padding: 200px 0;
+  margin: 0;
+  #howToBeSpeaker {
+    text-decoration: none;
+    text-underline: none;
+
+  }
+  #howToBeSpeaker:hover {
+    text-decoration: none;
+    text-underline: none;
+  }
+  .collapse.am-collapse {
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    overflow: hidden;
+    &.in-remove {
+      animation-name: collapse;
+      display: block;
+    }
+    &.in-add {
+      animation-name: expand;
+    }
+  }
+
+}

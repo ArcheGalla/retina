@@ -1,0 +1,35 @@
+nav.navbar.navbar-default.navbar-fixed-top
+    .container
+        .navbar-header.page-scroll
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a(href='#page-top', animate='')
+                img(src='assets/images/retina/logo.png', alt='retina lviv logo')
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                li.hidden
+                    a(href='#page-top')
+                li
+                    a.page-scroll.text-bold(href='#about') #{__('NAV_ABOUT')}
+                li
+                    a.page-scroll(href='#schedule') #{__('NAV_SCHEDULE')}
+                li
+                    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
+                li
+                    a.page-scroll(href='#partners') #{__('NAV_PARTNERS')}
+                li
+                    a.page-scroll(href='#contact') #{__('NAV_CONTACTS')}
+                li
+                    a.text-right.lang(ng-click='changeLanguage()') #{__('CHOOSE_LANG')}
+
+header(ng-cloak='')
+    .container
+        .intro-text
+            .intro-heading.text-shadow Retina Lviv 2016
+            .intro-lead-in.text-shadow #{__('MAIN_DESCRIPTION')}
+            a.page-scroll.btn.btn-xl(ng-href='{{ photo_report }}', target='_blank', style='margin-right: 25px;') #{__('BTN_RESULT_PHOTO')}
+            a.page-scroll.btn.btn-xl(ng-href='{{ video_report }}', target='_blank', style='margin-right: 25px;') #{__('BTN_RESULT_VIDEO')}
+            a.page-scroll.btn.btn-xl(ng-href='{{ video_record }}', target='_blank') #{__('BTN_RESULT_RECORD')}

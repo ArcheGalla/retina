@@ -1,0 +1,32 @@
+.countdown-wrapper.hidden-sm.hidden-xs
+    h1.text-center  #{__('COUNTER_TITLE')}
+    .countdown.countdown-container.container
+        .clock.row
+            .clock-item.clock-days.countdown-time-value.col-sm-6.col-md-3
+                .wrap
+                    .inner
+                        #canvas-days.clock-canvas
+                        .text
+                            p.val 0
+                            p.type-days.type-time DAYS
+            .clock-item.clock-hours.countdown-time-value.col-sm-6.col-md-3
+                .wrap
+                    .inner
+                        #canvas-hours.clock-canvas
+                        .text
+                            p.val 0
+                            p.type-hours.type-time HOURS
+            .clock-item.clock-minutes.countdown-time-value.col-sm-6.col-md-3
+                .wrap
+                    .inner
+                        #canvas-minutes.clock-canvas
+                        .text
+                            p.val 0
+                            p.type-minutes.type-time MINUTES
+            .clock-item.clock-seconds.countdown-time-value.col-sm-6.col-md-3
+                .wrap
+                    .inner
+                        #canvas-seconds.clock-canvas
+                        .text
+                            p.val 0
+                            p.type-seconds.type-time SECONDS
