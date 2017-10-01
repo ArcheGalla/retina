@@ -52,7 +52,7 @@ i18n.configure({
 });
 
 app.use('/assets/images', express.static(path.join(__dirname, 'public/images')));
-app.use('stylesheets/assets/images/', express.static(path.join(__dirname, 'public/images/')));
+app.use('/stylesheets/assets/images/', express.static(path.join(__dirname, 'public/images/')));
 
 app.use('/', index);
 app.use('/api', api);

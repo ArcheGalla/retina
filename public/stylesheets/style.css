@@ -5826,14 +5826,6 @@ button.close {
 .thumbnail img.pull-right {
   width: 50px; }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
-.ng-cloak, .x-ng-cloak,
-.ng-hide:not(.ng-hide-animate) {
-  display: none !important; }
-
-ng\:form {
-  display: block; }
-
 /*!
  * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -6067,7 +6059,8 @@ header {
   text-align: center;
   color: #fff;
   background-attachment: scroll;
-  background-image: url("retina/main_bg.png");
+  /*background-image: url("retina/main_bg.png");*/
+  background-image: url("/assets/images/retina/main_bg.png");
   background-position: center center;
   background-repeat: none;
   -webkit-background-size: cover;
@@ -7534,12 +7527,5 @@ body {
       display: block; }
     .session .collapse.am-collapse.in-add {
       animation-name: expand; }
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
 
 /*# sourceMappingURL=style.css.map */
