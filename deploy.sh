@@ -4,7 +4,7 @@ echo " Hello from bash script! "
 echo " Hello from bash script! "
 echo " Hello from bash script! "
 
-ssh -v retina@46.101.168.249 << EOF
+ssh -v -o StrictHostKeyChecking=no retina@46.101.168.249 << EOF
 
 cd ~/retina/
 touch test.txt
