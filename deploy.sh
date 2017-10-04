@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo " Hello from bash script! "
-echo " Hello from bash script! "
-echo " Hello from bash script! "
+echo " Deploy process is starting ... "
 
 #ssh -v -o StrictHostKeyChecking=no retina@46.101.168.249 << EOF
 
@@ -13,3 +11,5 @@ echo " Hello from bash script! "
 #npm install
 #npm run build
 #EOF
+
+echo " Deploy process is finished ... "

@@ -131,7 +131,8 @@ module.exports = function (_path) {
 				$: 'jquery',
 				jQuery: 'jquery',
 				'Kinetic': 'kinetic',
-				'classie': '/home/apushkar/WebstormProjects/retina/public/src/app/libs/classie.js',
+				//'classie': '/home/apushkar/WebstormProjects/retina/public/src/app/libs/classie.js',
+				'classie': path.join(_path, 'src/app/libs/classie.js'),
 				//'window.jQuery': 'jquery',
 				//'window.jquery': 'jquery',
 
@@ -150,7 +151,7 @@ module.exports = function (_path) {
 				children: true,
 				minChunks: Infinity
 			}),
-			new Manifest(path.join(_path + '/config', 'manifest.json'), {
+			new Manifest(path.join(_path + '/dist', 'manifest.json'), {
 				rootAssetPath: rootAssetPath,
 				ignorePaths: ['.DS_Store']
 			}),
