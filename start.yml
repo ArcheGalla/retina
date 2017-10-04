@@ -1,0 +1,8 @@
+apps:
+  name: retina
+  script: ./bin/www
+  watch: false
+  instances: 1
+  env:
+    NODE_ENV: production
+    PORT: 3000

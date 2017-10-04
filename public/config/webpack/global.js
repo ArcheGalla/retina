@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const Manifest = require('manifest-revision-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-//const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const rootPublic = path.resolve('./src');
 const NODE_ENV = process.env.NODE_ENV || "production";
@@ -70,11 +69,9 @@ module.exports = function (_path) {
 								cacheDirectory: false
 							}
 						},
-						//{
-						//	loader: 'baggage-loader?[file].html&[file].css'
-						//}
 					]
-				}, {
+				},
+				{
 					test: /\.css$/,
 					use: [
 						{
@@ -117,12 +114,9 @@ module.exports = function (_path) {
 				}
 			]
 		},
-
-		// load plugins
 		plugins: [
 			new webpack.LoaderOptionsPlugin({
 				options: {
-					// PostCSS
 					postcss: [autoprefixer({ browsers: ['last 5 versions'] })],
 				}
 			}),
@@ -131,11 +125,7 @@ module.exports = function (_path) {
 				$: 'jquery',
 				jQuery: 'jquery',
 				'Kinetic': 'kinetic',
-				//'classie': '/home/apushkar/WebstormProjects/retina/public/src/app/libs/classie.js',
 				'classie': path.join(_path, 'src/app/libs/classie.js'),
-				//'window.jQuery': 'jquery',
-				//'window.jquery': 'jquery',
-
 			}),
 			new webpack.DefinePlugin({
 				'NODE_ENV': JSON.stringify(NODE_ENV)
@@ -163,10 +153,6 @@ module.exports = function (_path) {
 			new CopyWebpackPlugin([{
 				from: 'src/assets', to: path.join(_path, 'dist', 'assets')
 			}], {})
-			//new HtmlWebpackPlugin({
-			//  filename: 'index.html',
-			//  template: path.join(_path, 'src', 'tpl-index.ejs')
-			//})
 		]
 	};
 
