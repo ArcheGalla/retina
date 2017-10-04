@@ -28,5 +28,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
       - deploy:
-          name: Maybe Deploy
+          name: Deploy to production
           command: sh deploy.sh

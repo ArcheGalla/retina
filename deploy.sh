@@ -4,7 +4,10 @@ echo " Hello from bash script! "
 echo " Hello from bash script! "
 echo " Hello from bash script! "
 
-# ssh -v root@46.101.168.249 << EOF
+ssh -v retina@46.101.168.249 << EOF
+
+cd ~/retina/
+touch test.txt
 
 # echo '1. Updating sources'
 # cd /patch/to/your/repository/
@@ -14,11 +17,4 @@ echo " Hello from bash script! "
 # echo "2. Restart apache"
 # sudo apache2ctl graceful
 
-#cd ;
-#
-#touch test.txt
-#
-#
-#echo 'Done!'
-#
-#EOF
+EOF
