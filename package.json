@@ -8,6 +8,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development PORT=3000 node ./bin/www",
     "launch": "cross-env NODE_ENV=production node ./bin/www",
+    "test": "echo test pass",
     "build": "cross-env NODE_ENV=production webpack --config ./public/webpack.config.js -p --colors",
     "production": "cross-env NODE_ENV=production PORT=80; node ./bin/www"
   },
@@ -16,6 +17,7 @@
     "angular-translate": "^2.15.2",
     "body-parser": "^1.17.2",
     "bootstrap-sass": "3.3.4",
+    "bootstrap": "^3.3.7",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
     "express": "^4.15.4",
@@ -38,8 +40,6 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-es2017": "^6.16.0",
     "babel-preset-stage-1": "^6.16.0",
-    "baggage-loader": "^0.2.4",
-    "bootstrap-sass-loader": "^1.0.10",
     "clean-webpack-plugin": "^0.1.10",
     "copy-webpack-plugin": "^4.1.0",
     "cross-env": "^3.0.0",

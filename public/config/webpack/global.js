@@ -70,9 +70,9 @@ module.exports = function (_path) {
 								cacheDirectory: false
 							}
 						},
-						{
-							loader: 'baggage-loader?[file].html&[file].css'
-						}
+						//{
+						//	loader: 'baggage-loader?[file].html&[file].css'
+						//}
 					]
 				}, {
 					test: /\.css$/,
@@ -129,8 +129,9 @@ module.exports = function (_path) {
 			new webpack.ProvidePlugin({
 
 				$: 'jquery',
-				//'jQuery': 'jquery',
+				jQuery: 'jquery',
 				'Kinetic': 'kinetic',
+				'classie': '/home/apushkar/WebstormProjects/retina/public/src/app/libs/classie.js',
 				//'window.jQuery': 'jquery',
 				//'window.jquery': 'jquery',
 

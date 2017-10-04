@@ -1,8 +1,8 @@
 import '!!file-loader?name=[name].[ext]!../favicon.ico';
 
-window.jQuery = require('jquery');
 import 'jquery';
-//import 'bootstrap-sass/assets/javascripts/bootstrap.min';
+
+import 'bootstrap';
 
 import './libs/libs';
 
