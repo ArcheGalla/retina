@@ -4,17 +4,12 @@ echo " Hello from bash script! "
 echo " Hello from bash script! "
 echo " Hello from bash script! "
 
-ssh -v -o StrictHostKeyChecking=no retina@46.101.168.249 << EOF
+#ssh -v -o StrictHostKeyChecking=no retina@46.101.168.249 << EOF
 
-cd ~/retina/
-touch test.txt
-
-# echo '1. Updating sources'
-# cd /patch/to/your/repository/
-# git checkout --force master
-# git pull
-
-# echo "2. Restart apache"
-# sudo apache2ctl graceful
-
-EOF
+#cd ~/retina/
+#git checkout --force master
+#git pull
+#rm -rf ./node_modules
+#npm install
+#npm run build
+#EOF

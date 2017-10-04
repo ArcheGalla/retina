@@ -10,7 +10,8 @@
     "launch": "cross-env NODE_ENV=production node ./bin/www",
     "test": "echo test pass",
     "build": "cross-env NODE_ENV=production webpack --config ./public/webpack.config.js -p --colors",
-    "production": "cross-env NODE_ENV=production PORT=80; node ./bin/www"
+    "production": "cross-env NODE_ENV=production PORT=80; node ./bin/www",
+    "staging": "cross-env NODE_ENV=production PORT=3000; node ./bin/www"
   },
   "dependencies": {
     "angular": "^1.6.6",
