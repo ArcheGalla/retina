@@ -33,4 +33,8 @@ jobs:
       # run tests!
       - run: npm test
 
-
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy.sh
