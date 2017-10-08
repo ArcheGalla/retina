@@ -10,10 +10,10 @@ html
         meta(name="keywords" content="Retina Lviv, Conference Retina Lviv, Symposium Retina Lviv")
         meta(name="Arche Galla" content="Retina Lviv")
 
-        // link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
-        // link(rel='stylesheet', href='styles/bundle.css')
+        if (production)
+            link(rel='stylesheet', href=`${style}`)
 
     body(id="page-top" class="index scrollme page-scroll")
         block content
-    script(src="bundle.js" async="true")
+    script(src=`${script}`, async="true")
 

@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const Manifest = require('manifest-revision-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const rootPublic = path.resolve('./src');
@@ -10,9 +9,10 @@ const DEVELOPMENT = NODE_ENV === "production" ? false : true;
 const stylesLoader = 'css-loader?root=' + rootPublic + '&sourceMap!postcss-loader!sass-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true';
 
 module.exports = function (_path) {
-	const rootAssetPath = _path + 'src';
+	// const rootAssetPath = _path + 'src';
 
 	const webpackConfig = {
+		context: _path,
 		entry: {
 			bundle: _path + '/src/app/entry'
 		},
@@ -23,7 +23,9 @@ module.exports = function (_path) {
 		},
 		resolve: {
 			extensions: ['.js', '.es6', '.jsx', '.scss', '.css'],
+			modules: [path.join(_path, '../', 'node_modules')],
 			alias: {
+				// jQuery: path.join(_path, 'node_modules', 'jquery/src/jquery.js'),
 				_appRoot: path.join(_path, 'src', 'app'),
 				_images: path.join(_path, 'src', 'assets', 'images'),
 				_stylesheets: path.join(_path, 'src', 'assets', 'styles'),
@@ -84,13 +86,15 @@ module.exports = function (_path) {
 							loader: 'postcss-loader'
 						}
 					]
-				}, {
+				},
+				{
 					test: /\.(scss|sass)$/,
 					loader: DEVELOPMENT ? ('style-loader!' + stylesLoader) : ExtractTextPlugin.extract({
 						fallbackLoader: "style-loader",
 						loader: stylesLoader
 					})
-				}, {
+				},
+				{
 					test: /\.(woff2|woff|ttf|eot|svg)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 					use: [
 						{
@@ -100,7 +104,8 @@ module.exports = function (_path) {
 							}
 						}
 					]
-				}, {
+				},
+				{
 					test: /\.(jpe?g|png|gif)$/i,
 					use: [
 						{
@@ -120,13 +125,14 @@ module.exports = function (_path) {
 					postcss: [autoprefixer({ browsers: ['last 5 versions'] })],
 				}
 			}),
-			new webpack.ProvidePlugin({
-
-				$: 'jquery',
-				jQuery: 'jquery',
-				'Kinetic': 'kinetic',
-				'classie': path.join(_path, 'src/app/libs/classie.js'),
-			}),
+			//new webpack.ProvidePlugin({
+			//	$: 'jquery',
+			//	'window.$': 'jquery',
+			//	'jQuery': 'jquery',
+			//	'window.jQuery': 'jquery',
+			//	'Kinetic': 'kinetic',
+			//	'classie': path.join(_path, 'src/app/libs/classie.js'),
+			//}),
 			new webpack.DefinePlugin({
 				'NODE_ENV': JSON.stringify(NODE_ENV)
 			}),
@@ -141,13 +147,8 @@ module.exports = function (_path) {
 				children: true,
 				minChunks: Infinity
 			}),
-			new Manifest(path.join(_path + '/dist', 'manifest.json'), {
-				rootAssetPath: rootAssetPath,
-				ignorePaths: ['.DS_Store']
-			}),
 			new ExtractTextPlugin({
-				//filename: 'styles/css/[name]' + (NODE_ENV === 'development' ? '' : '.[chunkhash]') + '.css',
-				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '') + '.css',
+				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '.[chunkhash]') + '.css',
 				allChunks: true
 			}),
 			new CopyWebpackPlugin([{

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import './coundown.scss';
 
 const end = Math.floor((new Date("05/4/2018")).getTime() / 1000);
