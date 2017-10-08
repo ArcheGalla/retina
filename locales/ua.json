@@ -1,16 +1,18 @@
 {
+	"HEADER": {
+		"NAV_ABOUT": "про симпозіум",
+		"NAV_CONTACTS": "контакти",
+		"MAIN_DESCRIPTION": "Всеукраїнський симпозіум офтальмологів",
+		"NAV_PARTNERS": "партнери"
+	},
 	"REGISTER_COMPLETE": "Реєстрація закрита",
 	"PARTNER_LINK_1": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",
 	"PARTNER_LINK_2": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",
 	"PARTNER_LINK_3": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",
 	"PARTNER_LINK_4": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",
 	"CHOOSE_LANG": "ENG",
-	"NAV_ABOUT": "про симпозіум",
 	"NAV_SCHEDULE": "розклад",
 	"NAV_REGISTRATION": "реєстрація",
-	"NAV_PARTNERS": "партнери",
-	"NAV_CONTACTS": "контакти",
-	"MAIN_DESCRIPTION": "Всеукраїнський симпозіум офтальмологів",
 	"BTN_REGISTRATION": "Реєстрація",
 	"BTN_RESULT_PHOTO": "Фотозвіт",
 	"BTN_RESULT_VIDEO": "Відеозвіт",
@@ -100,5 +102,11 @@
 	"ORG_NAME_SMETANA": "Вавілова Віра",
 	"FOOTER_ORG": "Організатори",
 	"YES": "Так",
-	"NO": "Ні"
+	"NO": "Ні",
+	"TEST.VAL": "TEST.VAL",
+	"HEADER/NAV_PARTNERS": "HEADER/NAV_PARTNERS",
+	"HEADER.NAV_ABOUT": "HEADER.NAV_ABOUT",
+	"HEADER.NAV_PARTNERS": "HEADER.NAV_PARTNERS",
+	"HEADER.NAV_CONTACTS": "HEADER.NAV_CONTACTS",
+	"HEADER.MAIN_DESCRIPTION": "HEADER.MAIN_DESCRIPTION"
 }

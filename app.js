@@ -11,6 +11,24 @@ const app = express();
 
 const NODE_ENV = process.env.NODE_ENV;
 
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+
+i18n.configure({
+	locales: ['ua', 'en'],
+	directory: path.join(__dirname, 'locales'),
+	defaultLocale: 'ua',
+	//cookie: 'retina',
+	objectNotation: true,
+	updateFiles: false,
+	queryParameter: 'lang',
+});
+
+
+app.use(i18n.init);
+
 if (NODE_ENV === 'development') {
 	const webpack = require('webpack');
 	const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -29,25 +47,8 @@ if (NODE_ENV === 'production') {
 }
 
 app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'pug');
-
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-app.use(i18n.init);
-
-i18n.configure({
-	locales: ['ua', 'den'],
-	directory: __dirname + '/locales',
-	defaultLocale: 'ua',
-	queryParameter: 'lang',  // query parameter to switch locale (ie. /home?lang=ch) - defaults to NULL
-});
-
-//app.use('/assets/images', express.static(path.join(__dirname, 'public/images')));
-//app.use('/stylesheets/assets/images/', express.static(path.join(__dirname, 'public/images/')));
-
 app.use('/', index);
 app.use('/api', api);
 

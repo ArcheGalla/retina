@@ -7,6 +7,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development PORT=3000 node ./bin/www",
+    "start:watch:server": "cross-env NODE_ENV=production PORT=3000 nodemon --config ./nodemon.json ./bin/www",
     "start:prod": "npm run build; npm run launch",
     "launch": "cross-env NODE_ENV=production node ./bin/www",
     "test": "echo test pass",

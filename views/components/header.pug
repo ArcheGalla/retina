@@ -7,29 +7,29 @@ nav.navbar.navbar-default.navbar-fixed-top
                 span.icon-bar
                 span.icon-bar
             a(href='#page-top', animate='')
-                img(src='assets/logo.png', alt='retina lviv logo')
+                img(src='assets/logo.png', alt='Retina Lviv')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
                 li.hidden
                     a(href='#page-top')
                 li
-                    a.page-scroll.text-bold(href='#about') #{__('NAV_ABOUT')}
+                    a.page-scroll.text-bold(href='#about') #{__('HEADER.NAV_ABOUT')}
                 li
                     a.page-scroll(href='#schedule') #{__('NAV_SCHEDULE')}
+                //li
+                //    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
                 li
-                    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
+                    a.page-scroll(href='#partners') #{__('HEADER.NAV_PARTNERS')}
                 li
-                    a.page-scroll(href='#partners') #{__('NAV_PARTNERS')}
+                    a.page-scroll(href='#contact') #{__('HEADER.NAV_CONTACTS')}
                 li
-                    a.page-scroll(href='#contact') #{__('NAV_CONTACTS')}
-                li
-                    a.text-right.lang #{__('CHOOSE_LANG')}
+                    a.text-right.lang(href=`/?lang=${ lang === 'ua' ? 'en': 'ua' }`) #{__('CHOOSE_LANG')}
 
 header
     .container
         .intro-text
             .intro-heading.text-shadow Retina Lviv 2017
-            .intro-lead-in.text-shadow #{__('MAIN_DESCRIPTION')}
+            .intro-lead-in.text-shadow #{__('HEADER.MAIN_DESCRIPTION')}
             a.page-scroll.btn.btn-xl(href="https://www.facebook.com/pg/oculus.medicalcenter/photos/?tab=album&album_id=1026821807388372", target='_blank', style='margin-right: 25px;') #{__('BTN_RESULT_PHOTO')}
             a.page-scroll.btn.btn-xl(href="https://www.youtube.com/watch?v=yRpVqQC6Phc", target='_blank', style='margin-right: 25px;') #{__('BTN_RESULT_VIDEO')}
             a.page-scroll.btn.btn-xl(href="https://www.youtube.com/watch?v=X_kEYRAqH14", target='_blank') #{__('BTN_RESULT_RECORD')}
