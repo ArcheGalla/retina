@@ -22,7 +22,7 @@ module.exports = function (_path) {
 			new webpack.optimize.UglifyJsPlugin({
 				minimize: true,
 				warnings: false,
-				sourceMap: true,
+				sourceMap: false,
 			}),
 			new Manifest(path.join(_path + '/dist', 'manifest.json'), {
 				rootAssetPath: rootAssetPath,

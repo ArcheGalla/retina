@@ -149,6 +149,7 @@ module.exports = function (_path) {
 			}),
 			new ExtractTextPlugin({
 				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '.[chunkhash]') + '.css',
+				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '') + '.css',
 				allChunks: true
 			}),
 			new CopyWebpackPlugin([{

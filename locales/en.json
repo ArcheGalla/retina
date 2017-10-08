@@ -2,8 +2,22 @@
   "HEADER": {
     "NAV_ABOUT": "About",
     "NAV_CONTACTS": "Contacts",
-    "MAIN_DESCRIPTION": "Ukrainian symposium of ophthalmologists",
-    "NAV_PARTNERS": "Partners"
+    "MAIN_DESCRIPTION": "The second Ukrainian conference of vitreoretinal surgeons",
+    "BTN_RESULT_PHOTO": "Photo Report",
+    "BTN_RESULT_VIDEO": "Video Report",
+    "BTN_RESULT_RECORD": "Video Record",
+    "NAV_PARTNERS": "Partners",
+    "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016"
+  },
+  "LOCATION": {
+    "LOCATION_PLACE": "Hotel \"Sonata\"",
+    "LOCATION_PLACE_STREET": "Ukraine, Lviv, Morozna str. 14",
+    "LOCATION_PLACE_PHONE": " +38 (032) 232 50 00",
+    "ORG_GROUP": "Organizational group",
+    "ORG_NAME_ONE": "Andriy Revich"
+  },
+  "FOOTER": {
+    "FOOTER_ORG": "Organizers"
   },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",
@@ -88,16 +102,10 @@
   "CART_OWNER": "Revych Andrei V.",
   "PAY_OPTIONS_1_3": "",
   "PAY_OPTIONS_3": "After you pass Step 1, our manager will contact you and send a payment document on your e-mail. You should print it and make payment in the bank. After completing the given items our manager will contact you once more for final confirmation of your participation in the symposium ",
-  "LOCATION_PLACE": "Park-hotel \"Drevny Grad\"",
-  "LOCATION_PLACE_STREET": "7th km of Kyiv route from Lviv, Ukraine",
-  "LOCATION_PLACE_PHONE": " +38 032 235 10 05",
   "ORG_GROUP": "Organizational group",
   "ORG_NAME_VOLKOVA": "Eugenia Volkova",
   "ORG_NAME_SMETANA": "Vira Vavilova",
   "FOOTER_ORG": "Organizers",
-  "BTN_RESULT_PHOTO": "Photo Report",
-  "BTN_RESULT_VIDEO": "Video Report",
-  "BTN_RESULT_RECORD": "Video Record",
   "PARTNER_LINK_1": "Click to visit Oculus web site",
   "PARTNER_LINK_2": "Click to visit WWWWWW web site",
   "PARTNER_LINK_3": "Click to visit WWWWWW web site",

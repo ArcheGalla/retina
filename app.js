@@ -20,12 +20,11 @@ i18n.configure({
 	locales: ['ua', 'en'],
 	directory: path.join(__dirname, 'locales'),
 	defaultLocale: 'ua',
-	//cookie: 'retina',
+	cookie: 'retina',
 	objectNotation: true,
 	updateFiles: false,
 	queryParameter: 'lang',
 });
-
 
 app.use(i18n.init);
 
@@ -49,6 +48,14 @@ if (NODE_ENV === 'production') {
 app.set('views', path.join(__dirname, 'views'));
 
 app.set('view engine', 'pug');
+
+app.use(function (req, res, next) {
+	if (req.query.lang) next();
+	else {
+		res.redirect('/?lang=ua')
+	}
+});
+
 app.use('/', index);
 app.use('/api', api);
 

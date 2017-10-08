@@ -1,0 +1,55 @@
+.container-fluid.lviv-location(id="contact")
+    .row
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12.block.location-bg
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12.block
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2575.445537963355!2d24.067054415707823!3d49.79649097939048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae815ac5d58c7%3A0xaa38cb881dcb18e2!2sMorozna+St%2C+14%2C+L'viv%2C+Lviv+Oblast!5e0!3m2!1sen!2sua!4v1503269840545", width="100%", height="600px", frameborder="0", style="border:0", allowfullscreen="")
+    .contact
+        .text-center.map
+            i.fa.fa-map-marker
+        .text-center
+            | #{__('LOCATION.LOCATION_PLACE')}
+            br
+            |  #{__('LOCATION.LOCATION_PLACE_STREET')}
+            br
+            i.fa.fa-phone
+            |  #{__('LOCATION.LOCATION_PLACE_PHONE')}
+            hr
+            h5 #{__('LOCATION.ORG_GROUP')}
+            strong
+                span
+                    | #{__('LOCATION.ORG_NAME_ONE')}:
+                    i.fa.fa-mobile
+                    a(href="tel:+38(067)-218-10-75") +38(067)-218-10-75
+                br
+            strong
+                i.fa.fa-envelope
+                a(href="mailto:retinalviv@gmail.com") retinalviv@gmail.com
+footer
+    .container
+        .row
+            .col-md-5
+                .row
+                    .col-lg-3.bold.copyright
+                        | #{__('FOOTER.FOOTER_ORG')}:
+                    .col-lg-9.text-left
+                        .row
+                            .col-xs-5
+                                .text-right #{__('LOCATION.ORG_NAME_ONE')} :
+                                // <div class="text-right">{{'ORG_NAME_SMETANA'|translate}} :</div>
+                            .col-xs-7
+                                .text-left
+                                    i.fa.fa-mobile
+                                    a(ng-href="tel:+38(067)-218-10-75") +38(067)-218-10-75
+                                .text-left
+                                    // <i class="fa fa-mobile"></i> <a ng-href="tel:{{phone_two}}">{{phone_two}}</a>
+                                    // <br>
+                                    // <i class="fa fa-mobile"></i> <a ng-href="tel:{{phone_three}}">{{phone_three}}</a>
+            .col-md-3
+                ul.list-inline.social-buttons
+                    li
+                        a(href="https://www.facebook.com/retinalviv/", target="_blank")
+                            i.fa.fa-facebook
+            .col-md-4
+                ul.list-inline.quicklinks
+                    li
+                        a(href="http://oculus.lviv.ua", target="_blank") Oculus

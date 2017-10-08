@@ -1,0 +1,24 @@
+.tezy {
+  .tezy-text {
+    text-align: justify;
+    line-height: 1.4;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #1D1D1D;
+    font-size: 1.8rem;
+  }
+  .list-titles {
+    background-color: #fed136;
+    padding: 3px;
+  }
+
+  .tyzy-submit-btn:active {
+    background-color: #fed136;
+  }
+
+  .tyzy-submit-btn {
+    box-shadow: 10px 10px 19px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 7px 7px 7px 7px;
+    border: 0 solid #000000;
+  }
+}

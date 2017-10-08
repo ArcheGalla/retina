@@ -1,26 +1,96 @@
-section
-    .container
-        .row
-            .col-lg-5.col-md-6.col-sm-12.col-xs-12.speaker-wrap
-                img.img-speaker(src='assets/novitskiy.png', alt='Retina Lviv')
-            .col-lg-7.col-md-6.col-sm-12.col-xs-12.intro-text
-                h3 #{__('DEAR_COLLEAGUES')}
-                p #{__('INTRO_TEXT_1')}
-                p #{__('INTRO_TEXT_2')}
-                p
-                    | #{__('INTRO_TEXT_3')}
-                    br
-                    a(style='color: #fed136!important;', href='http://lviv.travel/en/index') lviv.travel
-                    br
-                    a(style='color: #fed136!important;', href='http://lviv-online.com') lviv-online.com
-                    br
-                    a(style='color: #fed136!important;', href='http://www.lviv.ua') lviv.ua
-                p #{__('INTRO_TEXT_4')}
-                p
-                    | #{ __('INTRO_TEXT_5') }
-                    br
-                    strong.text-strong
-                        | #{__('INTRO_TEXT_6')}
+.container(id="about")
+    .row
+        .col-lg-5.col-md-6.col-sm-12.col-xs-12.speaker-wrap
+            img.img-speaker(src="assets/novitskiy.png", alt="Retina Lviv")
+        .col-lg-7.col-md-6.col-sm-12.col-xs-12.intro-text
+            if lang === 'en'
+                div
+                    h3 Dear colleagues!
+                    p
+                        | I cordially invite you to take participation in the second conference "Retina Lviv 2018" (innovations and
+                        | controversies in vitrеoretinal surgery).
                         br
-                        |           #{__('INTRO_TEXT_7')}
-    div(id='about')
+                        |           The Сonference will be held May 4-5, 2018 in the city of Lviv, Ukraine.
+                        br
+                    h4 Topics of the conference:
+                    ul.list-unstyled
+                        li
+                            p  - Controversies in vitreoretinal surgery
+                        li
+                            p  - New surgical techniques, innovations
+                        li
+                            p  - Laser coagulation in retina diseases
+                        li
+                            p
+                                | - Complications of vitreoretinal surgery, retinal complications of anterior segment surgery
+                        li
+                            p  - Inferior retinal detachments. Causes and management of recurrences
+                        li
+                            p  - Vitreoretinal surgery for eye injury
+                    br
+                    h4 Also in the program:
+                    ul.list-unstyled
+                        li
+                            p  - Lectures
+                        li
+                            p  - Coffee with the experts
+                        li
+                            p  - Short questions and answers
+                        li
+                            p  - Presentation of complex cases
+                        li
+                            p  - Video session
+                        li
+                            p  - Wetlab for vitreoretinal surgery
+                    strong Head of medical center “Oculus”
+                    br
+                    strong MD, Prof. Ihor Novytskyy
+            else
+                div
+                    h3 Шановні колеги!
+                    p
+                        | Щиро запрошую Вас прийняти участь у другій конференції «Ретіна-Львів 2018» (інновації та контроверсії у
+                        | вітреоретинальній хірургії).
+                        br
+                        |           Конференція відбудеться 4-5 травня 2018 року у місті Львів, Україна.
+                    h4 Теми симпозіуму:
+                    ul.list-unstyled
+                        li
+                            p  - Контроверсії у вітреоретинальній хірургії
+                        li
+                            p  - Нові прийоми хірургічної техніки, інновації
+                        li
+                            p  - Лазерна коагуляція при захворюваннях сітківки
+                        li
+                            p
+                                | - Ускладнення вітреоретинальної хірургії, ретинальні ускладнення хірургії переднього відрізку
+                        li
+                            p  - Нижні відшарування. Рецидиви: причини, тактика
+                        li
+                            p  - Вітреоретинальна хірургія при травмі ока
+                    br
+                    h4  Також у програмі:
+                    ul.list-unstyled
+                        li
+                            p  - Лекції
+                        li
+                            p  - Кава з експертом
+                        li
+                            p  - Короткі запитання і відповіді
+                        li
+                            p  - Презентація складних випадків
+                        li
+                            p  - Відеосесія
+                        li
+                            p  - Ветлаб по вітреоретинальній хірургії
+                    p Відпочинкова частина:
+                    p
+                        | Товариська вечеря після завершення роботи в перший день конференції.
+                        | Екскурсія по місту Львову в наступний день після завершення роботи конференції.
+                        | Оплата конференції включає: відвідання сесій, лекцій, участь у ветлабі (за записом), концерт, обід, каву під
+                        | час перерви і каву з експертом (за записом).
+                        | Товариська вечеря і екскурсія проводяться за додаткову плату.
+                    strong З повагою,
+                    strong Головний лікар МЦ «Oculus»
+                    br
+                    strong Професор Ігор Новицький

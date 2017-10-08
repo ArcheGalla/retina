@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const i18n = require('i18n');
 const production = process.env.NODE_ENV === 'production';
 
+const headerData = require('../public/src/app/components/header/header.json');
+const { result_photo, result_video, result_record } = headerData;
 let script = 'bundle.js';
 let style = '';
 
@@ -14,20 +15,16 @@ if (production) {
 }
 
 router.get('/', function (req, res) {
-	console.log('##############################################');
-	//console.log('res.__', res.locals.__n('HEADER.NAV_ABOUT'));
-	console.log(req.query.lang);
-	console.log(req.setLocale(req.query.lang || 'ua'));
-	//req.params.lang
-	console.log(res.__('HEADER.NAV_ABOUT'));
-	console.log('##############################################');
 
 	res.render('index', {
-		__: req.__,
+		__: res.__,
 		lang: req.locale,
 		production,
 		script,
-		style
+		style,
+		result_photo,
+		result_video,
+		result_record
 	});
 });
 

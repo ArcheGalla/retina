@@ -15,7 +15,9 @@
   "watch": [
     "app.js",
     "api/**",
-    "routes/*"
+    "routes/*",
+    "locales/*",
+    "view/**"
   ],
   "env": {
     "NODE_ENV": "production"

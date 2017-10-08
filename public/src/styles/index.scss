@@ -1,6 +1,12 @@
-//$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-//@import "../bootstrap/dist/css/bootstrap.css";
-//@import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
+$fa-font-path: "~font-awesome/fonts";
+//@import "~font-awesome/scss/font-awesome";
+@import "~font-awesome/scss/variables";
+@import "~font-awesome/scss/mixins";
+@import "~font-awesome/scss/path";
+@import "~font-awesome/scss/core";
+@import "~font-awesome/scss/larger";
+@import "~font-awesome/scss/icons";
+
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "thema";
+@import "../app/components/header/header";

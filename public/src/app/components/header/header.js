@@ -1,16 +1,18 @@
 import $ from 'jquery';
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function () {
-	$('.navbar-toggle:visible').click();
-});
-
-
-// Highlight the top nav as scrolling occurs
-//$('body').scrollspy({
-//    target: '.navbar-fixed-top'
-//});
+//import 'header.scss';
 
 $(function () {
+// Closes the Responsive Menu on Menu Item Click
+	$('.navbar-collapse ul li a').click(function () {
+		$('.navbar-toggle:visible').click();
+	});
+
+// Highlight the top nav as scrolling occurs
+	$('body').scrollspy({
+		target: '.navbar-fixed-top'
+	});
+
+	// data-scroll-link
 	$('a.page-scroll').bind('click', function (event) {
 		const $anchor = $(this);
 
