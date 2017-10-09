@@ -19,6 +19,30 @@
   "FOOTER": {
     "FOOTER_ORG": "Організатори"
   },
+  "THEMES_MODAL": {
+    "TITLE": "Подання тези",
+    "NAME": "Ім'я",
+    "SURNAME": "Прізвище",
+    "POSITION": "Посада або звання",
+    "POSITION_OPTIONS": {
+      "PROFESSOR": "професор",
+      "DOCTOR": "доктор",
+      "DOCENT": "доцент",
+      "ASSISTANT": "асистент"
+    },
+    "PLACE": "Заклад",
+    "PLACE_OPTIONS": {
+      "CLINIC": "клініка",
+      "UNIVERSITY": "університет"
+    },
+    "CITY": "Місто",
+    "COUNTRY": "Країна",
+    "PHONE": "Телефон",
+    "THEME_NAME": "Назва тези",
+    "THEME_TEXT": "Текс тези",
+    "CLOSE": "Закрити",
+    "SEND": "Відправити"
+  },
   "REGISTER_COMPLETE": "Реєстрація закрита",
   "PARTNER_LINK_1": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",
   "PARTNER_LINK_2": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",

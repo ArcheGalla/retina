@@ -16,8 +16,6 @@
     "staging": "cross-env NODE_ENV=production PORT=3000; node ./bin/www"
   },
   "dependencies": {
-    "angular": "^1.6.6",
-    "angular-translate": "^2.15.2",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "3.3.4",

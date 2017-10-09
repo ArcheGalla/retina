@@ -19,6 +19,30 @@
   "FOOTER": {
     "FOOTER_ORG": "Organizers"
   },
+  "THEMES_MODAL": {
+    "TITLE": "Submission theme",
+    "NAME": "Name",
+    "SURNAME": "Surname",
+    "POSITION": "Position",
+    "POSITION_OPTIONS": {
+      "PROFESSOR": "professor",
+      "DOCTOR": "doctor",
+      "DOCENT": "docent",
+      "ASSISTANT": "assistant"
+    },
+    "PLACE": "Place",
+    "PLACE_OPTIONS": {
+      "CLINIC": "clinic",
+      "UNIVERSITY": "university"
+    },
+    "CITY": "City",
+    "COUNTRY": "Country",
+    "PHONE": "Phone",
+    "THEME_NAME": "Themes name",
+    "THEME_TEXT": "Themes text",
+    "CLOSE": "Close",
+    "SEND": "Send"
+  },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",
   "NAV_REGISTRATION": "Registration",
