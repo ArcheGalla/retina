@@ -1,42 +1,41 @@
 const express = require('express');
 const router = express.Router();
-const validate = require('express-jsonschema').validate;
-
+const { Validator } = require('express-json-validator-middleware');
+const validator = new Validator({ allErrors: true });
+const fileEngine = require('../services/file-storage');
 const positionEnum = ['professor', 'doctor', 'docent', 'assistant', 'професор', 'доктор', 'доцент', 'асистент'];
 const placeEnum = ['clinic', 'university', 'клініка', 'університет'];
 
 const ThemeSchemas = {
 	type: 'object',
+	required: ['name', 'surname', 'country', 'email', 'topic', 'description', 'city', 'position', 'place', 'phone'],
 	properties: {
-		name: { type: 'string', required: true },
-		surname: { type: 'string', required: true },
-		country: { type: 'string', required: true },
-		email: { type: 'email', required: true },
-		theseName: { type: 'string', required: true },
-		description: { type: 'string', required: true },
-		city: { type: 'string', required: true },
-		position: { type: 'string', required: true, enum: positionEnum },
-		place: { type: 'string', required: true, enum: placeEnum },
-		phone: { type: 'string', required: true }
+		name: { type: 'string' },
+		surname: { type: 'string' },
+		country: { type: 'string' },
+		email: { type: 'string' },
+		topic: { type: 'string' },
+		description: { type: 'string' },
+		city: { type: 'string' },
+		position: { type: 'string', enum: positionEnum },
+		place: { type: 'string', enum: placeEnum },
+		phone: { type: 'string' }
 	}
 };
 
 function normalize(field) {
-	return field.trim().lowerCase();
+	return field.trim().toLowerCase();
 }
 
-router.post('/themes', validate({ body: ThemeSchemas }), function (req, res) {
-	const [email, name, surname, theseName] = req.body;
+router.post('/', validator.validate({ body: ThemeSchemas }), function (req, res) {
+	const { body } = req;
 
-	const nEmail = normalize(email);
-	const nName = normalize(name);
-	const nSurname = normalize(surname);
-	const nTheseName = normalize(theseName);
+	ThemeSchemas.required.forEach(field => body[field] = normalize(body[field]));
 
-	
-
-
-	res.status(200).json({ 'message': 'Created' });
+	fileEngine
+		.createFile(body)
+		.then(() => res.status(200).json({ 'message': 'Created' }))
+		.catch((err) => res.status(500).json({ "message": err }));
 });
 
 module.exports = router;

@@ -13,18 +13,20 @@ $('#theses-modal').on('shown.bs.modal', function () {
 		const country = $('#country').val();
 		const email = $('#email').val();
 		const phone = $('#phone').val();
-		const theseName = $('#these-name').val();
+		const topic = $('#these-name').val();
 		const description = $('#description').val();
 
 		const params = {
-			name, surname, position, place, city, country, email, phone, theseName, description
+			name, surname, position, place, city, country, email, phone, topic, description
 		};
 
-		$.ajax('', params).then(function () {
+		$.ajax('', params)
+			.then(() => {
 
-		}).catch(err => {
-			console.log('err ', err);
-		});
+			})
+			.catch(err => {
+				console.log('err ', err);
+			});
 
 		event.preventDefault();
 		event.stopImmediatePropagation();

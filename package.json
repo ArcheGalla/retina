@@ -6,13 +6,12 @@
     "nodemon": "node_modules/.bin/nodemon"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development PORT=3000 node ./bin/www",
-    "start:watch:server": "cross-env NODE_ENV=production PORT=3000 nodemon --config ./nodemon.json ./bin/www",
+    "start": "cross-env NODE_ENV=development PORT=3000 STORAGE=$HOME/.retina_home node ./bin/www",
+    "start:watch:server": "cross-env NODE_ENV=production PORT=3000 STORAGE=$HOME/.retina_home nodemon --config ./nodemon.json ./bin/www",
     "start:prod": "npm run build; npm run launch",
-    "launch": "cross-env NODE_ENV=production node ./bin/www",
+    "launch": "cross-env NODE_ENV=production STORAGE=$HOME/.retina_home node ./bin/www",
     "test": "echo test pass",
     "build": "cross-env NODE_ENV=production webpack --config ./public/webpack.config.js --colors",
-    "production": "pm2 start ./bin/www --name retina --node-args PORT 80 NODE_ENV production",
     "staging": "cross-env NODE_ENV=production PORT=3000; node ./bin/www"
   },
   "dependencies": {
@@ -22,7 +21,7 @@
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
     "express": "^4.15.4",
-    "express-jsonschema": "^1.1.6",
+    "express-json-validator-middleware": "^1.0.6",
     "file-exists": "^5.0.0",
     "i18n": "^0.8.3",
     "jquery": "^2.2.4",

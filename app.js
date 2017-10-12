@@ -9,7 +9,7 @@ const index = require('./routes/index');
 const api = require('./api');
 const app = express();
 
-const envConstants = require('./api/constant');
+const envConstants = require('./api/const/constant');
 
 i18n.configure({
 	locales: ['ua', 'en'],
@@ -27,7 +27,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(i18n.init);
 
-if (envConstants.ENV === 'development') {
+app.use('/', index);
+app.use('/api', api);
+
+if (envConstants.NODE_ENV === 'development') {
 	const webpack = require('webpack');
 	const webpackDevMiddleware = require('webpack-dev-middleware');
 	const config = require('./public/webpack.config.js');
@@ -38,7 +41,7 @@ if (envConstants.ENV === 'development') {
 	}));
 }
 
-if (envConstants.ENV === 'production') {
+if (envConstants.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, 'public', 'dist')));
 	app.use(express.static(path.join(__dirname, 'public', 'dist', 'assets')));
 	app.use(favicon(path.join(__dirname, 'public', 'dist', 'favicon.ico')));
@@ -51,8 +54,6 @@ app.use(function (req, res, next) {
 	}
 });
 
-app.use('/', index);
-app.use('/api', api);
 
 app.use(function (req, res, next) {
 	const err = new Error('Not Found');

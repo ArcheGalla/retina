@@ -6,3 +6,4 @@ apps:
   env:
     NODE_ENV: production
     PORT: 80
+    STORAGE: $HOME/.retina_home
