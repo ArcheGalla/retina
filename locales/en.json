@@ -7,7 +7,8 @@
     "BTN_RESULT_VIDEO": "Video Report",
     "BTN_RESULT_RECORD": "Video Record",
     "NAV_PARTNERS": "Partners",
-    "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016"
+    "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
+    "BTN_REGISTRATION": "Registration"
   },
   "LOCATION": {
     "LOCATION_PLACE": "Hotel \"Sonata\"",
@@ -46,7 +47,6 @@
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",
   "NAV_REGISTRATION": "Registration",
-  "BTN_REGISTRATION": "Registration",
   "DEAR_COLLEAGUES": "Dear colleagues",
   "INTRO_TEXT_1": "We sincerely invite you to take participation in the second symposium \"Retina-Lviv 2018\" (innovations and controversies in vitrеoretinal surgery).",
   "INTRO_TEXT_2": "The Symposium will be held May 4-5, 2018 in the city of Lviv, Ukraine.",

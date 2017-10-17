@@ -7,7 +7,8 @@
     "BTN_RESULT_RECORD": "Запис Конференції",
     "BTN_RESULT_VIDEO": "Відеозвіт",
     "NAV_PARTNERS": "партнери",
-    "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016"
+    "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
+    "BTN_REGISTRATION": "Реєстрація"
   },
   "LOCATION": {
     "LOCATION_PLACE": "Готель «Sonata»",
@@ -51,7 +52,7 @@
   "CHOOSE_LANG": "ENG",
   "NAV_SCHEDULE": "розклад",
   "NAV_REGISTRATION": "реєстрація",
-  "BTN_REGISTRATION": "Реєстрація",
+
   "DEAR_COLLEAGUES": "Шановні колеги!",
   "INTRO_TEXT_1": "Ми щиро запрошуємо Вас прийняти участь у другому симпозіумі «Ретіна-Львів 2018» (іновації та контроверсії у вітреоретинальній хірургії).",
   "INTRO_TEXT_2": "Симпозіум відбудеться 27-28 квітня 2018 року у місті Львів, Україна.",

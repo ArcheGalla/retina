@@ -1,5 +1,5 @@
-const env = require('../const/constant');
 const mailer = require('nodemailer');
+const env = require('../const/constant');
 
 const transporter = mailer.createTransport('SMTP', {
 	service: 'Gmail', auth: { user: env.EMAIL, pass: env.PASSWORD },
@@ -34,7 +34,7 @@ function composeEmailBodyText(user) {
 function composeEmailOptions(user, file) {
 	const mailOptions = {
 		from: `New User <${env.EMAIL}>`,
-		to: 'retinalviv@gmail.com, ',
+		to: 'retinalviv@gmail.com, artempushkar@gmail.com',
 		subject: 'New comer',
 		text: composeEmailBodyText(user),
 		html: composeEmailBodyHtml(user),
