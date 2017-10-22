@@ -41,6 +41,8 @@
     "PHONE": "Phone",
     "THEME_NAME": "Themes name",
     "THEME_TEXT": "Themes text",
+    "WELL_DONE": "Well done! You successfully submit new theme",
+    "WELL_BAD": "Oh snap! Change a few things up and try submitting again.",
     "CLOSE": "Close",
     "SEND": "Send"
   },

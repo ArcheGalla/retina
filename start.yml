@@ -3,7 +3,3 @@ apps:
   script: ./bin/www
   watch: false
   instances: 1
-  env:
-    NODE_ENV: production
-    PORT: 80
-    STORAGE: $HOME/.retina_home

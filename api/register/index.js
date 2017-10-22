@@ -1,5 +1,5 @@
 const { Validator } = require('express-json-validator-middleware');
-const mailer = require('../services/mailer');
+const mailer = require('../services/mailer/index');
 const express = require('express');
 const router = express.Router();
 const validator = new Validator({ allErrors: true });

@@ -19,8 +19,6 @@
     "locales/*",
     "view/**"
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
+  "env": {},
   "ext": "js json"
 }

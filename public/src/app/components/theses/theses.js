@@ -5,27 +5,29 @@ $('#theses-modal').on('shown.bs.modal', function () {
 	$('#name').focus();
 
 	$("form.modal-content").submit(function (event) {
-		const name = $('#name').val();
-		const surname = $('#surname').val();
-		const position = $('#position').val();
-		const place = $('#place').val();
-		const city = $('#city').val();
-		const country = $('#country').val();
-		const email = $('#email').val();
-		const phone = $('#phone').val();
-		const topic = $('#these-name').val();
-		const description = $('#description').val();
+		const submit = $('#theme-submit');
+		const alertSuccess = $('#alert-success');
+		const alertDanger = $('#alert-danger');
 
-		const params = {
-			name, surname, position, place, city, country, email, phone, topic, description
-		};
+		submit.attr('disabled', true);
 
-		$.ajax('', params)
-			.then(() => {
-
+		window
+			.fetch('/api/themes', {
+				method: 'POST',
+				body: new FormData(document.querySelector('form.modal-content'))
 			})
-			.catch(err => {
-				console.log('err ', err);
+			.then((response) => {
+				if (response.ok) {
+					alertSuccess.css({ display: 'block' });
+					setTimeout(() => alertSuccess.css({ display: 'none' }), 5500);
+					submit.attr('disabled', false);
+					$("form.modal-content")[0].reset();
+				} else throw new Error('Filed to submit theme');
+			})
+			.catch(() => {
+				submit.attr('disabled', false);
+				alertDanger.css({ display: 'block' });
+				setTimeout(() => alertDanger.css({ display: 'none' }), 2500);
 			});
 
 		event.preventDefault();

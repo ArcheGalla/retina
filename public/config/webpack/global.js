@@ -126,12 +126,7 @@ module.exports = function (_path) {
 				}
 			}),
 			//new webpack.ProvidePlugin({
-			//	$: 'jquery',
-			//	'window.$': 'jquery',
-			//	'jQuery': 'jquery',
-			//	'window.jQuery': 'jquery',
-			//	'Kinetic': 'kinetic',
-			//	'classie': path.join(_path, 'src/app/libs/classie.js'),
+
 			//}),
 			new webpack.DefinePlugin({
 				'NODE_ENV': JSON.stringify(NODE_ENV)
@@ -149,7 +144,7 @@ module.exports = function (_path) {
 			}),
 			new ExtractTextPlugin({
 				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '.[chunkhash]') + '.css',
-				filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '') + '.css',
+				//filename: 'styles/[name]' + (NODE_ENV === 'development' ? '' : '') + '.css',
 				allChunks: true
 			}),
 			new CopyWebpackPlugin([{

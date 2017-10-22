@@ -13,12 +13,17 @@ const envConstants = require('./api/const/constant');
 
 i18n.configure({
 	locales: ['ua', 'en'],
+	extension: '.json',
 	directory: path.join(__dirname, 'locales'),
 	defaultLocale: 'ua',
-	cookie: 'retina',
+	cookie: 'lang',
 	objectNotation: true,
 	updateFiles: false,
 	queryParameter: 'lang',
+	preserveLegacyCase: true,
+	logDebugFn: (info) => console.log('i18n log debug info ', info),
+	logWarnFn: (warning) => console.log('i18n log warning info ', warning),
+	logErrorFn: (Error) => console.log('i18n log error info ', error),
 });
 
 app.use(logger('dev'));
@@ -27,8 +32,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(i18n.init);
 
-app.use('/', index);
+//app.use('/', index);
 app.use('/api', api);
+
+app.use(function (req, res, next) {
+	if (req.path === '' || req.path === '/') {
+		if (req.query.lang) next();
+		else res.redirect('/?lang=ua')
+	} else next();
+});
+
+app.use('/', index);
 
 if (envConstants.NODE_ENV === 'development') {
 	const webpack = require('webpack');
@@ -46,14 +60,6 @@ if (envConstants.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, 'public', 'dist', 'assets')));
 	app.use(favicon(path.join(__dirname, 'public', 'dist', 'favicon.ico')));
 }
-
-app.use(function (req, res, next) {
-	if (req.query.lang) next();
-	else {
-		res.redirect('/?lang=ua')
-	}
-});
-
 
 app.use(function (req, res, next) {
 	const err = new Error('Not Found');

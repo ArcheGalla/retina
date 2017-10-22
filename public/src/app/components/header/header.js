@@ -23,4 +23,8 @@ $(function () {
 		}, 1500, 'easeInOutExpo');
 
 	});
+
+
+	//const document
+
 });

@@ -23,7 +23,7 @@
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="position") #{__('THEMES_MODAL.POSITION')}
-                                select.form-control(id="position", aria-describedby="position", required="true")
+                                select.form-control(id="position", name="position", aria-describedby="position", required="true")
                                     option #{__('THEMES_MODAL.POSITION_OPTIONS.PROFESSOR')}
                                     option #{__('THEMES_MODAL.POSITION_OPTIONS.DOCTOR')}
                                     option #{__('THEMES_MODAL.POSITION_OPTIONS.DOCENT')}
@@ -31,7 +31,7 @@
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="place") #{__('THEMES_MODAL.PLACE')}
-                                select.form-control(id="place", aria-describedby="place", required="true")
+                                select.form-control(id="place", name="place", aria-describedby="place", required="true")
                                     option #{__('THEMES_MODAL.PLACE_OPTIONS.CLINIC')}
                                     option #{__('THEMES_MODAL.PLACE_OPTIONS.UNIVERSITY')}
 
@@ -40,36 +40,37 @@
                             .form-group
                                 label(for="city") #{__('THEMES_MODAL.CITY')}
                                 - var cityPlaceholder = __('THEMES_MODAL.CITY')
-                                input.form-control(id="city", type="text", placeholder=`${cityPlaceholder}`, aria-describedby="city", required="true")
+                                input.form-control(id="city", type="text", name="city" placeholder=`${cityPlaceholder}`, aria-describedby="city", required="true")
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="country") #{__('THEMES_MODAL.COUNTRY')}
                                 - var countryPlaceholder = __('THEMES_MODAL.COUNTRY')
-                                input.form-control(id="country", type="text", placeholder=`${countryPlaceholder}`, aria-describedby="country", required="true")
+                                input.form-control(id="country", name="country" type="text", placeholder=`${countryPlaceholder}`, aria-describedby="country", required="true")
 
                     .row
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="email") Email
-                                input.form-control(id="email", type="email", placeholder="Email", aria-describedby="email", required="true")
+                                input.form-control(id="email", type="email", name="email", placeholder="Email", aria-describedby="email", required="true")
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="phone") #{__('THEMES_MODAL.PHONE')}
                                 - var phonePlaceholder = __('THEMES_MODAL.PHONE');
-                                input.form-control(id="phone", type="tel", placeholder=`${phonePlaceholder}`, aria-describedby="phone", required="true")
+                                input.form-control(id="phone", type="tel", name="phone" placeholder=`${phonePlaceholder}`, aria-describedby="phone", required="true")
 
                     .row
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="these-name") #{__('THEMES_MODAL.THEME_NAME')}
                                 - var themeNamePlaceholder = __('THEMES_MODAL.THEME_NAME');
-                                input.form-control(id="these-name", type="text", placeholder=`${themeNamePlaceholder}`, aria-describedby="these-name", required="true")
+                                input.form-control(id="these-name", type="text", name="topic", placeholder=`${themeNamePlaceholder}`, aria-describedby="these-name", required="true")
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
-                                label(for="description") #{__('THEMES_MODAL.THEME_TEXT')}
+                                label(for="theme") #{__('THEMES_MODAL.THEME_TEXT')}
                                 - var themeTextPlaceholder = __('THEMES_MODAL.THEME_TEXT');
-                                textarea.form-control(id="description", placeholder=`${themeTextPlaceholder}`, aria-describedby="theme-description", required="true")
-
+                                input(type="file", name="theme", id="theme", placeholder=`${themeTextPlaceholder}`, aria-describedby="theme-description", required="true")
             .modal-footer
+                .alert.alert-danger.text-center(id="alert-danger", role="alert", style="display:none") #{__('THEMES_MODAL.WELL_BAD')}
+                .alert.alert-success.text-center(id="alert-success", role="alert", style="display:none") #{__('THEMES_MODAL.WELL_DONE')}
                 button.btn.btn-default(type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
-                button.btn.btn-primary(type="submit") #{__('THEMES_MODAL.SEND')}
+                button.btn.btn-primary(id="theme-submit", type="submit") #{__('THEMES_MODAL.SEND')}
