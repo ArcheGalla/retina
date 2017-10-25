@@ -1,13 +1,14 @@
 const express = require('express');
-const router = express.Router();
-const themes = require('./themes');
-const LiqPay = require('./lib/sdk-nodejs/lib/liqpay');
 const uuidv1 = require('uuid/v1');
-const liqpay = new LiqPay('i45547894422', 'SSUq0Baf1yuNxSw279n2n6jjBeipGSo0pY2VHvlK');
-router.use('/themes', themes);
+const router = express.Router();
 
-router.post('/checkout', function (req, res) {
-	const html = liqpay.cnb_form({
+const ENV = require('../const/constant');
+const LiqPay = require('../lib/sdk-nodejs/lib/liqpay');
+
+const liqPaySdk = new LiqPay(ENV.LIQPAY_PUBLIC, ENV.LIQPAY_SECRET);
+
+router.post('/', function (req, res) {
+	const html = liqPaySdk.cnb_form({
 			'action': 'pay',
 			'amount': '10',
 			'currency': 'UAH',

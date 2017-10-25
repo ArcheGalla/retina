@@ -1,10 +1,76 @@
+include registration-modal/registration-modal
+
 .container
-    .row.registration(style='border: 1px solid red')
+    .row.registration
         .col-xs-12
             h1.section-heading.text-center #{__('REGISTRATION.TITLE')}
-            p Оплата симпозіуму включає:  відвідання сесій, виставки, лекцій, участь у ветлабі
-            | (згідно попереднього запису), концерт, обід, каву під час перерви і каву з експертом
-            | (згідно попереднього запису). Товариська вечеря і екскурсія проводяться за додаткову плату.
+            br
+            p.lead У вартість входить: відвідання сесій, виставки, лекцій, участь у ветлабі (згідно попереднього запису), концерт, обід, каву під час перерви і каву з експертом (згідно попереднього запису)
+            p.lead Товариська вечеря і екскурсія проводяться за додаткову плату
+
+.container.registration
+    br
+    .row.text-center
+        .col-lg-3.col-md-6
+            br
+            .card
+                .card-header
+                    h3 #{__('REGISTRATION.CARD_HEADER_ONE')}
+                .card-body
+                    h3.card-title * Для лікарів *
+                    h2.card-title(style="margin: 10px 0") 1000 грн
+                    br
+                    h4.card-title Для Студендів
+                    hr
+                    h2.card-title(style="margin: 10px 0") 700 грн
+
+                .card-footer
+                    a.btn.btn-primary(data-toggle="modal", data-target="#registration-modal") Register
+        .col-lg-3.col-md-6
+            br
+            .card
+                .card-header
+                    h3 #{__('REGISTRATION.CARD_HEADER_TWO')}
+                .card-body
+                    //h4.card-title #{__('REGISTRATION.CARD_SUB_TITLE')}
+                    h3.card-title * Для лікарів *
+                        h2.card-title(style="margin: 10px 0") 1200 грн
+                        br
+                        h4.card-title Для Студендів
+                        hr
+                        h2.card-title(style="margin: 10px 0") 800 грн
+                .card-footer
+                    a.btn.btn-primary(data-toggle="modal", data-target="#registration-modal") Register
+        .col-lg-3.col-md-6
+            br
+            .card
+                .card-header
+                    h3 #{__('REGISTRATION.CARD_HEADER_TREE')}
+                .card-body
+                    h3.card-title * Для лікарів *
+                        h2.card-title(style="margin: 10px 0") 1400 грн
+                        br
+                        h4.card-title Для Студендів
+                        hr
+                        h2.card-title(style="margin: 10px 0") 900 грн
+
+                .card-footer
+                    a.btn.btn-primary(data-toggle="modal", data-target="#registration-modal") Register
+        .col-lg-3.col-md-6
+            br
+            .card
+                .card-header
+                    h3 #{__('REGISTRATION.CARD_HEADER_FOUR')}
+                .card-body
+                    h4.card-title(style="margin: 10px 0") 700 грн до 31.12.2017
+                    br
+                    h4.card-title(style="margin: 10px 0") 800 грн до 31.03.2018
+                    br
+                    h4.card-title(style="margin: 10px 0") На місці
+                    hr
+                    h2.card-title(style="margin: 10px 0") 900 грн
+                .card-footer
+                    a.btn.btn-primary(data-toggle="modal", data-target="#registration-modal") Register
 
 
 

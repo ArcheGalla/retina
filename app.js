@@ -6,8 +6,7 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const i18n = require('i18n');
-const api = require('./api');
-
+const api = require('./api/api');
 const app = express();
 
 const envConstants = require('./api/const/constant');

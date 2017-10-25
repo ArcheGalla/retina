@@ -47,7 +47,12 @@
     "SEND": "Send"
   },
   "REGISTRATION": {
-    "TITLE": "Registration"
+    "TITLE": "Registration",
+    "CARD_HEADER_ONE": "Card header"
+  },
+  "REGISTRATION_MODAL": {
+    "TITLE": "Registration",
+    "REGISTER": "Register"
   },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",

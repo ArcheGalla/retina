@@ -47,7 +47,12 @@
     "SEND": "Відправити"
   },
   "REGISTRATION": {
-    "TITLE": "Реєстрація"
+    "TITLE": "Реєстрація",
+    "CARD_HEADER_ONE": ""
+  },
+  "REGISTRATION_MODAL": {
+    "TITLE": "Реєстрація",
+    "REGISTER": "Зареєструватись"
   },
   "REGISTER_COMPLETE": "Реєстрація закрита",
   "PARTNER_LINK_1": "Натисніть щоб відвідати інтернет сторінку медичного центру Oculus",

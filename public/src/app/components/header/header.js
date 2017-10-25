@@ -1,5 +1,5 @@
 import $ from 'jquery';
-//import 'header.scss';
+import './header.scss';
 
 $(function () {
 // Closes the Responsive Menu on Menu Item Click
