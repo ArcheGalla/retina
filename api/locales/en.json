@@ -46,6 +46,9 @@
     "CLOSE": "Close",
     "SEND": "Send"
   },
+  "REGISTRATION": {
+    "TITLE": "Registration"
+  },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",
   "NAV_REGISTRATION": "Registration",

@@ -18,5 +18,6 @@ import './components/header/header';
 import './components/introduction/introduction.js';
 import './components/theses/theses';
 import './components/location/location';
+import './components/registration/registration';
 
 import "../styles/index.scss";

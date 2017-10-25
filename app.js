@@ -1,12 +1,13 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
+const index = require('./api/router');
+const express = require('express');
+const logger = require('morgan');
+const path = require('path');
 const i18n = require('i18n');
-const index = require('./routes/index');
 const api = require('./api');
+
 const app = express();
 
 const envConstants = require('./api/const/constant');
@@ -14,7 +15,7 @@ const envConstants = require('./api/const/constant');
 i18n.configure({
 	locales: ['ua', 'en'],
 	extension: '.json',
-	directory: path.join(__dirname, 'locales'),
+	directory: path.join(__dirname, 'api/locales'),
 	defaultLocale: 'ua',
 	cookie: 'lang',
 	objectNotation: true,
@@ -97,7 +98,7 @@ app.use(function (err, req, res) {
 	res.render('error');
 });
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/src'));
 app.set('view engine', 'pug');
 
 module.exports = app;

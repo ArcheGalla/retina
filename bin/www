@@ -3,7 +3,7 @@
 const app = require('../app');
 const http = require('http');
 const server = http.createServer(app);
-const envConstants = require('../api/const/constant');
+const ENV = require('../api/const/constant');
 
 server.on('error', function onError(error) {
 	if (error.syscall !== 'listen') {
@@ -14,7 +14,6 @@ server.on('error', function onError(error) {
 		? 'Pipe ' + port
 		: 'Port ' + port;
 
-	// handle specific listen errors with friendly messages
 	switch (error.code) {
 		case 'EACCES':
 			console.error(bind + ' requires elevated privileges');
@@ -30,7 +29,7 @@ server.on('error', function onError(error) {
 });
 
 server.on('listening', function onListening() {
-	console.log(`App is started on port  ${envConstants.PORT}`);
+	console.log(`App is started on port  ${ENV.PORT}`);
 });
 
-server.listen(envConstants.PORT);
+server.listen(ENV.PORT);

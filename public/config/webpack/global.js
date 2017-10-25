@@ -9,8 +9,6 @@ const DEVELOPMENT = NODE_ENV === "production" ? false : true;
 const stylesLoader = 'css-loader?root=' + rootPublic + '&sourceMap!postcss-loader!sass-loader?outputStyle=expanded&sourceMap=true&sourceMapContents=true';
 
 module.exports = function (_path) {
-	// const rootAssetPath = _path + 'src';
-
 	const webpackConfig = {
 		context: _path,
 		entry: {
@@ -25,7 +23,7 @@ module.exports = function (_path) {
 			extensions: ['.js', '.es6', '.jsx', '.scss', '.css'],
 			modules: [path.join(_path, '../', 'node_modules')],
 			alias: {
-				// jQuery: path.join(_path, 'node_modules', 'jquery/src/jquery.js'),
+				//jquery: path.join(_path, 'node_modules', 'jquery/src/jquery.js'),
 				_appRoot: path.join(_path, 'src', 'app'),
 				_images: path.join(_path, 'src', 'assets', 'images'),
 				_stylesheets: path.join(_path, 'src', 'assets', 'styles'),
@@ -33,17 +31,14 @@ module.exports = function (_path) {
 			}
 		},
 		module: {
-			rules: [{
-				test: /\.html$/,
-				use: [
-					{
+			rules: [
+				{
+					test: /\.html$/,
+					use: [{
 						loader: 'html-loader',
-						options: {
-							attrs: ['img:src', 'img:data-src']
-						}
-					}
-				]
-			},
+						options: { attrs: ['img:src', 'img:data-src'] }
+					}]
+				},
 				//{
 				//	test: /\.js$/,
 				//	exclude: [
@@ -58,20 +53,11 @@ module.exports = function (_path) {
 				//},
 				{
 					test: /\.js$/,
-					//exclude: [
-					//	path.resolve(_path, "node_modules/*")
-					//],
+					exclude: [path.resolve(_path, "node_modules/*")],
 					//include:[
 					//	path.resolve(_path, "node_modules/bootstrap")
 					//],
-					use: [
-						{
-							loader: 'babel-loader',
-							options: {
-								cacheDirectory: false
-							}
-						},
-					]
+					use: [{ loader: 'babel-loader', options: { cacheDirectory: false } }]
 				},
 				{
 					test: /\.css$/,
@@ -99,9 +85,7 @@ module.exports = function (_path) {
 					use: [
 						{
 							loader: 'url-loader',
-							options: {
-								name: 'assets/fonts/[name]_[hash].[ext]'
-							}
+							options: { name: 'assets/fonts/[name]_[hash].[ext]' }
 						}
 					]
 				},
@@ -110,10 +94,7 @@ module.exports = function (_path) {
 					use: [
 						{
 							loader: 'url-loader',
-							options: {
-								name: 'assets/images/[name]_[hash].[ext]',
-								limit: 10000
-							}
+							options: { name: 'assets/images/[name]_[hash].[ext]', limit: 10000 }
 						}
 					]
 				}
@@ -122,20 +103,14 @@ module.exports = function (_path) {
 		plugins: [
 			new webpack.LoaderOptionsPlugin({
 				options: {
-					postcss: [autoprefixer({ browsers: ['last 5 versions'] })],
+					postcss: [autoprefixer({ browsers: ['last 2 versions'] })],
 				}
 			}),
-			//new webpack.ProvidePlugin({
-
-			//}),
-			new webpack.DefinePlugin({
-				'NODE_ENV': JSON.stringify(NODE_ENV)
-			}),
+			//new webpack.ProvidePlugin({}),
+			//new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+			new webpack.DefinePlugin({ 'NODE_ENV': JSON.stringify(NODE_ENV) }),
 			new webpack.NoEmitOnErrorsPlugin(),
-			new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-			new webpack.optimize.AggressiveMergingPlugin({
-				moveToParents: true
-			}),
+			new webpack.optimize.AggressiveMergingPlugin({ moveToParents: true }),
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'common',
 				async: true,
@@ -154,5 +129,4 @@ module.exports = function (_path) {
 	};
 
 	return webpackConfig;
-
 };

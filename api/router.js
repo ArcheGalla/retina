@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const envConstants = require('../api/const/constant');
+const envConstants = require('./const/constant');
 const production = envConstants.NODE_ENV === 'production';
 
 const headerData = require('../public/src/app/components/header/header.json');
