@@ -1,3 +1,2 @@
 import './registration.scss';
-
-console.log(' this is registration page');
+import './registration-modal/registration-modal'

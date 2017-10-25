@@ -48,7 +48,10 @@
   },
   "REGISTRATION": {
     "TITLE": "Реєстрація",
-    "CARD_HEADER_ONE": ""
+    "CARD_HEADER_ONE": "До 31/12/2017",
+    "CARD_HEADER_TWO": "До 31/03/2018",
+    "CARD_HEADER_TREE": "На місці",
+    "CARD_HEADER_FOUR": "Вечеря"
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Реєстрація",

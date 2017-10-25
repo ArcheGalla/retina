@@ -48,7 +48,10 @@
   },
   "REGISTRATION": {
     "TITLE": "Registration",
-    "CARD_HEADER_ONE": "Card header"
+    "CARD_HEADER_ONE": "Card header",
+    "CARD_HEADER_TWO": "Card header",
+    "CARD_HEADER_TREE": "Card header",
+    "CARD_HEADER_FOUR": "Card header"
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Registration",
