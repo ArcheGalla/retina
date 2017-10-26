@@ -1,9 +1,9 @@
-const envVariables = require('../../const/constant');
+const ENV = require('../../const/constant');
 
 module.exports = {
 	getSubmitThemeEmailMessage(file, theme) {
 		return {
-			to: envVariables.EMAIL,
+			to: ENV.EMAIL,
 			subject: 'Нова теза',
 			text: `
 				Нова теза:
@@ -76,12 +76,47 @@ module.exports = {
 
 		return { to: email, subject, text, html }
 	},
-	getSuccessfulPaymentEmailMessage(lang, to) {
+	getNewRegistrationSubmitMessage(client, order_id) {
 		return {
-			to: to,
-			subject: 'SuccessfulPaymentEmail',
-			text: 'SuccessfulPaymentEmail',
-			html: `SuccessfulPaymentEmail`
-		}
+			to: ENV.EMAIL,
+			subject: `New registration id ${order_id}`,
+			text: `
+				New incoming request for registration \n
+				Name: ${client.name} \n
+				Email: ${client.email} \n
+				Phone: ${client.phone} \n
+				Message: ${client.message} \n
+				Position: ${client.position} \n
+				Dinner: ${client.dinner} \n
+				Id: ${order_id}
+			`,
+			html: `
+				<h2>New incoming request for registration</h2>
+				<ul>
+					<li>Name: ${client.name}</li>
+					<li>Email: ${client.email}</li>
+					<li>Phone: ${client.phone}</li>
+					<li>Message: ${client.message}</li>
+					<li>Position: ${client.position} </li>
+					<li>Dinner: ${client.dinner}</li>
+					<li>Id: ${order_id}</li>
+				</ul>
+				
+			`
+		};
+	},
+	getNewRegistrationNotifyEmail(client) {
+		return {
+			to: client.email,
+			subject: 'Ticket notify ',
+			text: `
+				 Thanks for participate!
+				 Currently we don't have any ticket system. The identification will be based by the name and phone number 
+			`,
+			html: `
+				 <h2>Thanks for participate!</h2>	
+				 <p>Currently we don't have any ticket system. The identification will be based by the name and phone number </p>
+			`
+		};
 	}
 };

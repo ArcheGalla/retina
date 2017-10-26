@@ -1,6 +1,6 @@
 .modal.fade(id="registration-modal", tabindex="-1", role="dialog")
     .modal-dialog.modal-lg(role="document")
-        form.modal-content(name="themesForm", onsubmit="return false")
+        form.modal-content(id="registerForm", name="registerForm", onsubmit="return false")
             .modal-header
                 button.close(type="button", data-dismiss="modal", aria-label="Close")
                     span(aria-hidden="true") ×
@@ -29,17 +29,17 @@
                                 .col-xs-12.col-sm-12.col-md-12.col-lg-12
                                     .row
                                         .col-xs-12.col-sm-12.col-md-7.col-lg-7
-                                            .form-group
+                                            .form-group(id="ticket-version")
                                                 label.radio-inline
-                                                    input#isDoctor(type='radio', name='isDoctor', value='doctor')
+                                                    input#isDoctor(type='radio', name='isDoctor', value="doctor", required="true", checked)
                                                     |  Лікар
                                                 label.radio-inline
-                                                    input#isIntern(type='radio', name='isDoctor', value='intern')
+                                                    input#isIntern(type='radio', name='isDoctor', value="intern", required="true")
                                                     |  Студент чи інтерн
                                         .col-xs-12.col-sm-12.col-md-5.col-lg-5
                                             .form-group
                                                 label.checkbox-inline
-                                                    input#inlineCheckbox1(type='checkbox', value='option1')
+                                                    input#dinner(type='checkbox', name="dinner", checked)
                                                     |  Включно із вечерею
 
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
@@ -48,10 +48,10 @@
                                 - var phonePlaceholder = __('THEMES_MODAL.PHONE');
                                 textarea.form-control(id="message", name="message" placeholder=`${phonePlaceholder}`, aria-describedby="message", rows="4", width="100%")
             .modal-footer
-                .alert.alert-danger.text-center(id="alert-danger", role="alert", style="display:none") #{__('THEMES_MODAL.WELL_BAD')}
-                .alert.alert-success.text-center(id="alert-success", role="alert", style="display:none") #{__('THEMES_MODAL.WELL_DONE')}
-                button.btn.btn-default(type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
-                button.btn.btn-primary(id="theme-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}
+                span(id='pay-insert-area')
+                span(id='pay-hide-area')
+                    button.btn.btn-default(id="register-pay-after" ,type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
+                    button.btn.btn-primary(id="register-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}
                 h5.pull-left(data-dismiss="modal") Сума до сплати:
                      span(id="total-money") 0
 

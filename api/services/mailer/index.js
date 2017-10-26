@@ -27,13 +27,27 @@ module.exports = {
 
 		return transporter
 			.verify()
-			.then(()=> transporter.sendMail(message));
+			.then(() => transporter.sendMail(message));
 	},
-	sandSuccessfulPaymentEmail(lang, email) {
-		const message = messageFactory.getSuccessfulPaymentEmailMessage(lang, email);
+	sandNewRegistrationEmail(client, order_id) {
+		const message = messageFactory.getNewRegistrationSubmitMessage(client, order_id);
+
+		return transporter
+			.verify()
+			.then(() => transporter.sendMail(message))
+	},
+	sandNewRegistrationNotifyEmail(client) {
+		const message = messageFactory.getNewRegistrationNotifyEmail(client);
 
 		return transporter
 			.verify()
 			.then(() => transporter.sendMail(message));
+	},
+	sandSuccessfulPaymentEmail(lang, email) {
+		//const message = messageFactory.getSuccessfulPaymentEmailMessage(lang, email);
+
+		//return transporter
+		//	.verify()
+		//	.then(() => transporter.sendMail(message));
 	}
 };
