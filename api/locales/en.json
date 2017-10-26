@@ -48,10 +48,17 @@
   },
   "REGISTRATION": {
     "TITLE": "Registration",
-    "CARD_HEADER_ONE": "Card header",
-    "CARD_HEADER_TWO": "Card header",
-    "CARD_HEADER_TREE": "Card header",
-    "CARD_HEADER_FOUR": "Card header"
+    "CARD_HEADER_ONE": "To 31/12/2017",
+    "CARD_HEADER_TWO": "To 31/03/2018",
+    "CARD_HEADER_TREE": "in place",
+    "CARD_HEADER_FOUR": "Dinner",
+    "DESC_ONE": "У вартість входить: відвідання сесій, виставки, лекцій, участь у ветлабі (згідно попереднього запису), концерт, обід, каву під час перерви і каву з експертом (згідно попереднього запису)",
+    "DESC_TWO": "Товариська вечеря і екскурсія проводяться за додаткову плату",
+    "FOR_DOC":"For doctors",
+    "UAH": "UAH",
+    "FOR_STUDENTS":"For students",
+    "REGISTER":"Register",
+    "TO":"to"
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Registration",
