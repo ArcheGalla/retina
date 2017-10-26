@@ -32,15 +32,15 @@
                                             .form-group(id="ticket-version")
                                                 label.radio-inline
                                                     input#isDoctor(type='radio', name='isDoctor', value="doctor", required="true", checked)
-                                                    |  Лікар
+                                                    |  #{__('REGISTRATION_MODAL.DOCTOR')}
                                                 label.radio-inline
                                                     input#isIntern(type='radio', name='isDoctor', value="intern", required="true")
-                                                    |  Студент чи інтерн
+                                                    | #{__('REGISTRATION_MODAL.ST_OR_INTERN')}
                                         .col-xs-12.col-sm-12.col-md-5.col-lg-5
                                             .form-group
                                                 label.checkbox-inline
                                                     input#dinner(type='checkbox', name="dinner", checked)
-                                                    |  Включно із вечерею
+                                                    |  #{__('REGISTRATION_MODAL.DINNER_INCLUDE')}
 
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
@@ -50,8 +50,8 @@
             .modal-footer
                 span(id='pay-insert-area')
                 span(id='pay-hide-area')
-                    button.btn.btn-default(id="register-pay-after" ,type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
+                    button.btn.btn-default(id="register-pay-after" , type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
                     button.btn.btn-primary(id="register-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}
-                h5.pull-left(data-dismiss="modal") Сума до сплати:
-                     span(id="total-money") 0
+                h5.pull-left(data-dismiss="modal") #{__('REGISTRATION_MODAL.AMOUNT_DUE')} :
+                     span(id="total-money")
 

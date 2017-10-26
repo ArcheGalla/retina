@@ -54,15 +54,19 @@
     "CARD_HEADER_FOUR": "Dinner",
     "DESC_ONE": "У вартість входить: відвідання сесій, виставки, лекцій, участь у ветлабі (згідно попереднього запису), концерт, обід, каву під час перерви і каву з експертом (згідно попереднього запису)",
     "DESC_TWO": "Товариська вечеря і екскурсія проводяться за додаткову плату",
-    "FOR_DOC":"For doctors",
+    "FOR_DOC": "For doctors",
     "UAH": "UAH",
-    "FOR_STUDENTS":"For students",
-    "REGISTER":"Register",
-    "TO":"to"
+    "FOR_STUDENTS": "For students",
+    "REGISTER": "Register",
+    "TO": "to"
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Registration",
-    "REGISTER": "Register"
+    "REGISTER": "Register",
+    "DOCTOR": "Doctor",
+    "ST_OR_INTERN": "Student or intern",
+    "DINNER_INCLUDE": "With dinner include",
+    "AMOUNT_DUE": "Amount due"
   },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",
