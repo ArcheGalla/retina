@@ -125,17 +125,11 @@ $('#registration-modal').on('shown.bs.modal', function () {
 		headers.append('Content-Type', 'application/json');
 
 		axios({
-			url: '/api/checkout',
+			url: '/api/checkout?lang=ua',
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
 			data: { name, email, phone, message, position, dinner, amount }
 		})
-			.then(function (res) {
-				console.log('res ', res);
-
-
-				return res;
-			})
 			.then(response => response.data)
 			.then(function (payBtn) {
 				submit.attr('disabled', false);
