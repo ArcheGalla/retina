@@ -1,3 +1,7 @@
 #registration-modal {
-
+  .modal-footer {
+    form[method=POST] {
+      display: inline-block;
+    }
+  }
 }

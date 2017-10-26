@@ -44,11 +44,11 @@
 
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
-                                label(for="phone") #{__('THEMES_MODAL.PHONE')}
-                                - var phonePlaceholder = __('THEMES_MODAL.PHONE');
-                                textarea.form-control(id="message", name="message" placeholder=`${phonePlaceholder}`, aria-describedby="message", rows="4", width="100%")
+                                label(for="phone") #{__('REGISTRATION_MODAL.DESCRIPTION')}
+                                - var messagePlaceholder = __('REGISTRATION_MODAL.DESCRIPTION');
+                                textarea.form-control(id="message", name="message" placeholder=`${messagePlaceholder}`, aria-describedby="message", rows="4", width="100%")
             .modal-footer
-                span(id='pay-insert-area')
+                span(id='pay-insert-area', style="background: green;")
                 span(id='pay-hide-area')
                     button.btn.btn-default(id="register-pay-after" , type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
                     button.btn.btn-primary(id="register-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}

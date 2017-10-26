@@ -27,30 +27,44 @@ router.post('/', function (req, res, next) {
 		locale = 'en';
 	}
 
-	const order_id = uuidv1();
+	try {
+		const order_id = uuidv1();
 
-	Mailer.sandNewRegistrationEmail(client, order_id);
-	Mailer.sandNewRegistrationNotifyEmail(client);
+		// Mailer.sandNewRegistrationEmail(client, order_id);
+		// Mailer.sandNewRegistrationNotifyEmail(client);
 
-	const uaTicket = 'Retina Lviv 2017 - квиток';
-	const enTicket = 'Retina Lviv 2017 - tickets';
+		const uaTicket = 'Retina Lviv 2017 - квиток';
+		const enTicket = 'Retina Lviv 2017 - tickets';
 
-	const paymentDescription = locale === 'ua' ? uaTicket : enTicket;
+		const paymentDescription = locale === 'ua' ? uaTicket : enTicket;
 
-	const html = liqPaySdk.cnb_form({
-		'action': 'pay',
-		'amount': amount,
-		'currency': 'UAH',
-		'description': paymentDescription,
-		'language': locale === 'ua' ? 'uk' : 'en', // uk, en
-		'order_id': order_id,
-		'version': '3',
-		'sandbox': ENV.NODE_ENV === 'development' ? 1 : 0,
-		'result_url': ENV.NODE_ENV === 'development' ?
-			`http://localhost:3000/?lang=${locale}&order=${order_id}` : `http://retina-lviv.com/?lang=${locale}&order=${order_id}`
-	});
+		const html = liqPaySdk.cnb_form({
+			'action': 'pay',
+			'amount': amount,
+			'currency': 'UAH',
+			'description': paymentDescription,
+			'language': locale === 'ua' ? 'ru' : 'en', // uk, en
+			'order_id': order_id,
+			'version': '3',
+			//'sandbox': ENV.NODE_ENV === 'development' ? 1 : 0,
+			'result_url': ENV.NODE_ENV === 'development' ?
+				`http://localhost:3000/?lang=${locale}&order=${order_id}` : `http://retina-lviv.com/?lang=${locale}&order=${order_id}`
+		});
 
-	res.status(200).json(html);
+		//const workUrl = 'https://static.liqpay.ua/buttons/p1ru.radius.png';
+		// 					   //static.liqpay.ua/buttons/p1uk.radius.png
+
+		const updatedHtml = html.replace(
+			'//static.liqpay.ua/buttons/p1uk.radius.png',
+			'https://static.liqpay.ua/buttons/p1ru.radius.png'
+		);
+
+		console.log('html',html);
+
+		res.status(200).json(html);
+	} catch (e) {
+		res.status(401).json(e);
+	}
 });
 
 module.exports = router;

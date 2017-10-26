@@ -63,6 +63,7 @@
   "REGISTRATION_MODAL": {
     "TITLE": "Registration",
     "REGISTER": "Register",
+    "DESCRIPTION": "Message",
     "DOCTOR": "Doctor",
     "ST_OR_INTERN": "Student or intern",
     "DINNER_INCLUDE": "With dinner include",
