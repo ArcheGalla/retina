@@ -30,8 +30,8 @@ router.post('/', function (req, res, next) {
 	try {
 		const order_id = uuidv1();
 
-		// Mailer.sandNewRegistrationEmail(client, order_id);
-		// Mailer.sandNewRegistrationNotifyEmail(client);
+		Mailer.sandNewRegistrationEmail(client, order_id);
+		Mailer.sandNewRegistrationNotifyEmail(client);
 
 		const uaTicket = 'Retina Lviv 2017 - квиток';
 		const enTicket = 'Retina Lviv 2017 - tickets';
