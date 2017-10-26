@@ -2,11 +2,13 @@
   "HEADER": {
     "NAV_ABOUT": "About",
     "NAV_CONTACTS": "Contacts",
-    "MAIN_DESCRIPTION": "The second Ukrainian conference of vitreoretinal surgeons",
+    "MAIN_TITLE": "Innovations and controversies in vitrеoretinal surgery.",
+    "SUB_TITLE": "May 4-5, 2018 Lviv",
     "BTN_RESULT_PHOTO": "Photo Report",
     "BTN_RESULT_VIDEO": "Video Report",
     "BTN_RESULT_RECORD": "Video Record",
     "NAV_PARTNERS": "Partners",
+    "NAV_HOTELS": "Hotels",
     "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
     "BTN_REGISTRATION": "Registration"
   },

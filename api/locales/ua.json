@@ -2,11 +2,13 @@
   "HEADER": {
     "NAV_ABOUT": "про симпозіум",
     "NAV_CONTACTS": "контакти",
-    "MAIN_DESCRIPTION": "Друга всеукраїнська конференція офтальмологів",
+    "MAIN_TITLE": "Інновації та контроверсії у вітреоретинальній хірургії",
+    "SUB_TITLE": "4-5 травня 2018, м. Львів",
     "BTN_RESULT_PHOTO": "Фотозвіт",
     "BTN_RESULT_RECORD": "Запис Конференції",
     "BTN_RESULT_VIDEO": "Відеозвіт",
-    "NAV_PARTNERS": "партнери",
+    "NAV_PARTNERS": "Партнери",
+    "NAV_HOTELS": "Готелі",
     "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
     "BTN_REGISTRATION": "Реєстрація"
   },
