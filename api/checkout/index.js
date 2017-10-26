@@ -51,16 +51,6 @@ router.post('/', function (req, res, next) {
 				`http://localhost:3000/?lang=${locale}&order=${order_id}` : `http://retina-lviv.com/?lang=${locale}&order=${order_id}`
 		});
 
-		//const workUrl = 'https://static.liqpay.ua/buttons/p1ru.radius.png';
-		// 					   //static.liqpay.ua/buttons/p1uk.radius.png
-
-		const updatedHtml = html.replace(
-			'//static.liqpay.ua/buttons/p1uk.radius.png',
-			'https://static.liqpay.ua/buttons/p1ru.radius.png'
-		);
-
-		console.log('html',html);
-
 		res.status(200).json(html);
 	} catch (e) {
 		res.status(401).json(e);
