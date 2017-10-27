@@ -10,7 +10,11 @@
     "NAV_PARTNERS": "Партнери",
     "NAV_HOTELS": "Готелі",
     "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
-    "BTN_REGISTRATION": "Реєстрація"
+    "BTN_REGISTRATION": "Реєстрація",
+    "BTN_ABOUT": "Про симпозіум",
+    "BTN_PROGRAM":"Програма",
+    "BTN_LOCATION": "Локація",
+    "BTN_THEME": "Подання тез"
   },
   "LOCATION": {
     "LOCATION_PLACE": "Готель «Sonata»",

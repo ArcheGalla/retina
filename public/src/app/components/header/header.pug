@@ -10,17 +10,19 @@ nav.navbar.navbar-default.navbar-fixed-top
                 img(src='assets/logo.png', alt='Retina Lviv')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
-                li
-                    a.page-scroll(href='#contact') #{__('HEADER.NAV_PARTNERS')}
-                li
-                    a.page-scroll(href='#contact') #{__('HEADER.NAV_PARTNERS')}
-                li
-                    a.page-scroll.text-bold(href='#about') #{__('HEADER.NAV_ABOUT')}
+                //li
+                //    a.page-scroll(href='#contact') #{__('HEADER.NAV_PARTNERS')}
+                //li
+                //    a.page-scroll.text-bold(href='#about') #{__('HEADER.NAV_ABOUT')}
                 //li
                 //    a.page-scroll(href='#schedule') #{__('NAV_SCHEDULE')}
-                li
-                    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
+                //li
+                //    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
 
+                li
+                    a.page-scroll(href='#contact') #{__('HEADER.NAV_PARTNERS')}
+                li
+                    a.page-scroll(href='#contact') #{__('HEADER.NAV_HOTELS')}
                 li
                     a.page-scroll(href='#contact') #{__('HEADER.NAV_CONTACTS')}
                 li
@@ -29,16 +31,28 @@ nav.navbar.navbar-default.navbar-fixed-top
 header(id="header")
     .container
         .row
-            .col-xs-12.intro-text
+            .col-xs-12.col-sm-12-col-md-12.col-lg-12.intro-text
                 .intro-heading.text-shadow Retina Lviv 2018
                 .intro-lead-in.text-shadow #{__('HEADER.MAIN_TITLE')}
                 .intro-lead-in.text-shadow #{__('HEADER.SUB_TITLE')}
                 //.intro-lead-old.text-shadow #{__('HEADER.MAIN_DESCRIPTION_PREVIOUS')}
                 //.intro-lead.text-shadow #{__('HEADER.MAIN_DESCRIPTION_PREVIOUS')}
-                a.btn.btn-xl.nav-btnee(href=`${result_photo}`, target='_blank') #{__('HEADER.BTN_RESULT_PHOTO')}
-                a.btn.btn-xl.nav-btnee(href=`${result_video}`, target='_blank') #{__('HEADER.BTN_RESULT_VIDEO')}
-                a.btn.btn-xl.nav-btnee(href=`${result_record}`, target='_blank') #{__('HEADER.BTN_RESULT_RECORD')}
+        .row
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                .btn.btn-default.btn-xl(data-toggle="modal", data-target="#registration-modal") #{ __('HEADER.BTN_REGISTRATION') }
+                a.page-scroll(href="#about")
+                    .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_ABOUT')}
+                .btn.btn-default.btn-xl.nav-btnee(disabled="true") #{__('HEADER.BTN_PROGRAM')}
+                .btn.btn-default.btn-xl.nav-btnee(data-toggle="modal", data-target="#registration-modal") #{ __('HEADER.BTN_REGISTRATION') }
+                a.page-scroll(href="#contact")
+                    .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_LOCATION')}
+
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                a.page-scroll(href='#put-theme')
+                    .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_THEME')}
+                a.btn.btn-xl.nav-btnee(href=`${result_photo}`, target='_blank') #{__('HEADER.BTN_RESULT_PHOTO')}
+                //a.btn.btn-xl.nav-btnee(href=`${result_video}`, target='_blank') #{__('HEADER.BTN_RESULT_VIDEO')}
+                //a.btn.btn-xl.nav-btnee(href=`${result_record}`, target='_blank') #{__('HEADER.BTN_RESULT_RECORD')}
+            //.col-xs-12.col-sm-12.col-md-12.col-lg-12
+                //.btn.btn-default.btn-xl(data-toggle="modal", data-target="#registration-modal") #{ __('HEADER.BTN_REGISTRATION') }
 
 

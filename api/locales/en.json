@@ -10,7 +10,11 @@
     "NAV_PARTNERS": "Partners",
     "NAV_HOTELS": "Hotels",
     "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
-    "BTN_REGISTRATION": "Registration"
+    "BTN_REGISTRATION": "Registration",
+    "BTN_ABOUT": "About symposium",
+    "BTN_PROGRAM": "Program",
+    "BTN_LOCATION": "Location",
+    "BTN_THEME": "Theme"
   },
   "LOCATION": {
     "LOCATION_PLACE": "Hotel \"Sonata\"",
