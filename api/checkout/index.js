@@ -9,15 +9,17 @@ const liqPaySdk = new LiqPay(ENV.LIQPAY_PUBLIC, ENV.LIQPAY_SECRET);
 const Mailer = require('../services/mailer');
 
 router.post('/', function (req, res, next) {
-	const { name, email, phone, message, position, dinner, amount } = req.body;
-	if (!name || !email || !phone || !message || !position || !dinner || !amount) {
-		return res.status(401);
-	}
+	//const { name, email, phone, message, position, dinner, amount } = req.body;
+	//if (!name || !email || !phone || !message || !position || !dinner || !amount) {
+	//	return res.status(401);
+	//}
+
 	next();
 }, function (req, res) {
 
 	const client = req.body;
-	const { name, email, phone, message, position, dinner, amount } = client;
+
+	const { amount } = client;
 
 	let locale;
 
