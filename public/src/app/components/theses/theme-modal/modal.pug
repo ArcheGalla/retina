@@ -23,17 +23,13 @@
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="position") #{__('THEMES_MODAL.POSITION')}
-                                select.form-control(id="position", name="position", aria-describedby="position", required="true")
-                                    option #{__('THEMES_MODAL.POSITION_OPTIONS.PROFESSOR')}
-                                    option #{__('THEMES_MODAL.POSITION_OPTIONS.DOCTOR')}
-                                    option #{__('THEMES_MODAL.POSITION_OPTIONS.DOCENT')}
-                                    option #{__('THEMES_MODAL.POSITION_OPTIONS.ASSISTANT')}
+                                - var positionPlaceholder = __('THEMES_MODAL.POSITION_PLACEHOLDER');
+                                input.form-control(id="position", name="position", placeholder=`${positionPlaceholder}` aria-describedby="position", required="true")
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .form-group
                                 label(for="place") #{__('THEMES_MODAL.PLACE')}
-                                select.form-control(id="place", name="place", aria-describedby="place", required="true")
-                                    option #{__('THEMES_MODAL.PLACE_OPTIONS.CLINIC')}
-                                    option #{__('THEMES_MODAL.PLACE_OPTIONS.UNIVERSITY')}
+                                - var placePlaceholder = __('THEMES_MODAL.PLACE_PLACEHOLDER');
+                                input.form-control(id="place", placeholder=`${placePlaceholder}` name="place", aria-describedby="place", required="true")
 
                     .row
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6

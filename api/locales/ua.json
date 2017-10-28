@@ -30,18 +30,10 @@
     "TITLE": "Подання тези",
     "NAME": "Ім'я",
     "SURNAME": "Прізвище",
-    "POSITION": "Посада або звання",
-    "POSITION_OPTIONS": {
-      "PROFESSOR": "професор",
-      "DOCTOR": "доктор",
-      "DOCENT": "доцент",
-      "ASSISTANT": "асистент"
-    },
+    "POSITION": "Посада, вчена ступінь, звання",
+    "POSITION_PLACEHOLDER":"Посада, вчена ступінь",
     "PLACE": "Заклад",
-    "PLACE_OPTIONS": {
-      "CLINIC": "клініка",
-      "UNIVERSITY": "університет"
-    },
+    "PLACE_PLACEHOLDER":"Заклад",
     "CITY": "Місто",
     "COUNTRY": "Країна",
     "PHONE": "Телефон",

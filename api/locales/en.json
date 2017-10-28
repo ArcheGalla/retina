@@ -31,17 +31,9 @@
     "NAME": "Name",
     "SURNAME": "Surname",
     "POSITION": "Position",
-    "POSITION_OPTIONS": {
-      "PROFESSOR": "professor",
-      "DOCTOR": "doctor",
-      "DOCENT": "docent",
-      "ASSISTANT": "assistant"
-    },
+    "POSITION_PLACEHOLDER":"Position",
     "PLACE": "Place",
-    "PLACE_OPTIONS": {
-      "CLINIC": "clinic",
-      "UNIVERSITY": "university"
-    },
+    "PLACE_PLACEHOLDER":"Place",
     "CITY": "City",
     "COUNTRY": "Country",
     "PHONE": "Phone",
