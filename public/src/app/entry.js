@@ -1,7 +1,7 @@
 import '!!file-loader?name=[name].[ext]!../favicon.ico';
 
 // vendors
-import 'jquery';
+import $ from 'jquery';
 import 'imports-loader?jQuery=jquery!bootstrap-sass/assets/javascripts/bootstrap.js';
 
 // jquery plugins
@@ -21,3 +21,7 @@ import './components/location/location';
 import './components/registration/registration';
 
 import "../styles/index.scss";
+
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
