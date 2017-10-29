@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import './theses.scss';
 
+const themeForm = document.querySelector('#theses-modal form');
+const submit = $('#theme-submit');
+const alertSuccess = $('#alert-success');
+const alertDanger = $('#alert-danger');
 
-$("#theses-modal form").submit(function (event) {
-	const submit = $('#theme-submit');
-	const alertSuccess = $('#alert-success');
-	const alertDanger = $('#alert-danger');
-
+function submitTheme(event) {
 	submit.attr('disabled', true);
 
 	window
@@ -30,12 +30,18 @@ $("#theses-modal form").submit(function (event) {
 
 	event.preventDefault();
 	event.stopImmediatePropagation();
-});
+}
+
+function onModalOpen() {
+	$('#theses-modal #name').focus();
+}
+
+function onModalClose() {
+	themeForm.reset();
+}
+
+themeForm.addEventListener('submit', submitTheme);
 
 $('#theses-modal')
-	.on('shown.bs.modal', function () {
-		$('#name').focus();
-	})
-	.on('hide.bs.modal', function () {
-		document.querySelector('#theses-modal form').reset();
-	});
+	.on('shown.bs.modal', onModalOpen)
+	.on('hide.bs.modal', onModalClose);
