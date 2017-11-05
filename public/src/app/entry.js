@@ -13,12 +13,13 @@ import 'imports-loader?jQuery=jquery!./libs/jquery.easing.min';
 import 'imports-loader?jQuery=jquery!./libs/jquery.transit.min';
 
 // components
-import './components/countdown/countdown';
-import './components/header/header';
-import './components/introduction/introduction.js';
-import './components/theses/theses';
-import './components/location/location';
-import './components/registration/registration';
+//import './components/countdown/countdown';
+//import './components/header/header';
+//import './components/introduction/introduction.js';
+//import './components/theses/theses';
+//import './components/location/location';
+//import './components/registration/registration';
+import './components/schedule/schedule';
 
 import "../styles/index.scss";
 
