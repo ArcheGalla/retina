@@ -89,8 +89,8 @@ calculus.recount();
 const form = document.getElementById('register-form');
 
 document.getElementById('register-form').addEventListener('change', function onFormChange() {
-		calculus.recount();
-	}
+	calculus.recount();
+}
 );
 
 $(form).submit(function (event) {
@@ -107,36 +107,34 @@ $(form).submit(function (event) {
 	const amount = calculus.count();
 
 	const data = { name, email, phone, message, position, dinner, amount };
+	let lang = 'en';
 
+	try {
+		const searchParams = new URLSearchParams(window.location.search);
+		if(searchParams.has('lang')){
+			lang = searchParams.get('lang');
+		}
+	} catch (e){
+		// default value will be english
+		lang = 'en';
+	}
+	
 	axios({
 		url: '/api/checkout',
 		method: 'post',
+		params: {
+			lang: lang
+		},
 		headers: { 'Content-Type': 'application/json' },
 		data
 	})
 		.then(response => response.data)
-		.then((payBtn) => {
+		.then(payBtn => {
 			submit.attr('disabled', false);
 			$('#pay-hide-area').hide();
 			$('#pay-insert-area').append(payBtn);
 		})
-		.catch(function (error) {
-			submit.attr('disabled', false);
-			console.log('error', error)
-		});
-	//window.fetch('/api/checkout', { method: 'POST', headers, body })
-	//	.then(response => response.json())
-	//	.then(payBtn => {
-	//		submit.attr('disabled', false);
-	//		$('#pay-hide-area').remove();
-	//		$('#pay-insert-area').append(payBtn);
-	//	})
-	//	.catch(err => {
-	//		submit.attr('disabled', false);
-	//		console.log('e', err)
-	//	});
-
-	//event.stopImmediatePropagation();
+		.catch(() => submit.attr('disabled', false));
 	event.preventDefault();
 });
 
@@ -144,14 +142,14 @@ $(form).submit(function (event) {
 $('#registration-modal').on('shown.bs.modal', function () {
 
 })
-.on('hide.bs.modal', function () {
-	$('#register-form')[0].reset();
+	.on('hide.bs.modal', function () {
+		$('#register-form')[0].reset();
 
-	const forms = document.querySelectorAll('#pay-insert-area > form');
+		const forms = document.querySelectorAll('#pay-insert-area > form');
 
-	if (forms) {
-		forms.forEach((el) => el.remove())
-	}
+		if (forms) {
+			forms.forEach( el => el.remove())
+		}
 
-	$('#pay-hide-area').show();
-});
+		$('#pay-hide-area').show();
+	});
