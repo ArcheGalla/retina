@@ -12,7 +12,7 @@
     "MAIN_DESCRIPTION_PREVIOUS": "Retina Lviv 2016",
     "BTN_REGISTRATION": "Реєстрація",
     "BTN_ABOUT": "Про симпозіум",
-    "BTN_PROGRAM":"Програма",
+    "BTN_PROGRAM": "Програма",
     "BTN_LOCATION": "Локація",
     "BTN_THEME": "Подання тез"
   },
@@ -31,9 +31,9 @@
     "NAME": "Ім'я",
     "SURNAME": "Прізвище",
     "POSITION": "Посада, вчена ступінь, звання",
-    "POSITION_PLACEHOLDER":"Посада, вчена ступінь",
+    "POSITION_PLACEHOLDER": "Посада, вчена ступінь",
     "PLACE": "Заклад",
-    "PLACE_PLACEHOLDER":"Заклад",
+    "PLACE_PLACEHOLDER": "Заклад",
     "CITY": "Місто",
     "COUNTRY": "Країна",
     "PHONE": "Телефон",
@@ -56,7 +56,25 @@
     "UAH": "Грн",
     "FOR_STUDENTS": "Для Студендів",
     "REGISTER": "Зареєструватись",
-    "TO": "to"
+    "TO": "to",
+    "CONFIRMATION": "Необхідно надати підтверджений документ (студентський квиток, тощо)",
+    "PRICES": {
+      "STEP_ONE": {
+        "DOC": "1000 Грн",
+        "STUDENT": "700 Грн",
+        "DINNER": "700 Грн"
+      },
+      "STEP_TWO": {
+        "DOC": "1200 Грн",
+        "STUDENT": "800 Грн",
+        "DINNER": "800 Грн"
+      },
+      "IN_PLACE": {
+        "DOC": "1400 Грн",
+        "STUDENT": "900 Грн",
+        "DINNER": "900 Грн"
+      }
+    }
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Реєстрація",

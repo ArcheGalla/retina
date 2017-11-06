@@ -31,9 +31,9 @@
     "NAME": "Name",
     "SURNAME": "Surname",
     "POSITION": "Position",
-    "POSITION_PLACEHOLDER":"Position",
+    "POSITION_PLACEHOLDER": "Position",
     "PLACE": "Place",
-    "PLACE_PLACEHOLDER":"Place",
+    "PLACE_PLACEHOLDER": "Place",
     "CITY": "City",
     "COUNTRY": "Country",
     "PHONE": "Phone",
@@ -50,13 +50,31 @@
     "CARD_HEADER_TWO": "To 31/03/2018",
     "CARD_HEADER_TREE": "in place",
     "CARD_HEADER_FOUR": "Dinner",
-    "DESC_ONE": "У вартість входить: відвідання сесій, виставки, лекцій, участь у ветлабі (згідно попереднього запису), концерт, обід, каву під час перерви і каву з експертом (згідно попереднього запису)",
-    "DESC_TWO": "Товариська вечеря і екскурсія проводяться за додаткову плату",
+    "DESC_ONE": "Symposium fees include: Free paper sessions, lectures, exhibition, participation in wetlab (with pre-registration), concert, lunches, coffee brakes and coffee with expert (with pre-registration)",
+    "DESC_TWO": "Dinner and excursion are not included and is on additional payment.",
     "FOR_DOC": "For doctors",
     "UAH": "UAH",
     "FOR_STUDENTS": "For students",
     "REGISTER": "Register",
-    "TO": "to"
+    "TO": "to",
+    "CONFIRMATION": "A confirmation document (student id etc) must be provided",
+    "PRICES": {
+      "STEP_ONE": {
+        "DOC": "1000 Euro",
+        "STUDENT": "700 Euro",
+        "DINNER": "700 Euro"
+      },
+      "STEP_TWO": {
+        "DOC": "1200 Euro",
+        "STUDENT": "800 Euro",
+        "DINNER": "800 Euro"
+      },
+      "IN_PLACE": {
+        "DOC": "1400 Euro",
+        "STUDENT": "900 Euro",
+        "DINNER": "900 Euro"
+      }
+    }
   },
   "REGISTRATION_MODAL": {
     "TITLE": "Registration",
