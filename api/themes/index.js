@@ -1,4 +1,4 @@
-const { Validator } = require('express-json-validator-middleware');
+//const { Validator } = require('express-json-validator-middleware');
 const envVariables = require('../../api/const/constant');
 const express = require('express');
 const router = express.Router();
@@ -11,8 +11,8 @@ const dest = path.resolve(envVariables.THEME_STORAGE);
 const upload = multer({ dest });
 
 router.post('/', upload.single('theme'), function (req, res) {
-	console.log('req.file ', req.file);
-	console.log('req.body ', req.body);
+//	console.log('req.file ', req.file);
+//	console.log('req.body ', req.body);
 
 	const { file } = req;
 	let locale;

@@ -20,12 +20,53 @@
 
                     .row
                         .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                            .form-group
+                                label(for="register-country") #{__("REGISTRATION_MODAL.COUNTRY")}
+                                - var registerCountryPlaceholder = __("REGISTRATION_MODAL.COUNTRY");
+                                input.form-control(
+                                id="register-country",
+                                name="register-country",
+                                type="text",
+                                placeholder=`${registerCountryPlaceholder}`,
+                                aria-describedby="register country",
+                                required="true")
+                        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                            .form-group
+                                label(for="email") #{__('REGISTRATION_MODAL.CITY')}
+                                - var registrationCityPlaceholder = __('REGISTRATION_MODAL.CITY')
+                                input.form-control(
+                                id="register-city",
+                                type="text",
+                                name="register-city",
+                                placeholder=`${registrationCityPlaceholder}`,
+                                aria-describedby="register city",
+                                required="true")
+                    .row
+                        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                            .form-group
+                                label(for="phone") #{__('THEMES_MODAL.PHONE')}
+                                - var phonePlaceholder = __('THEMES_MODAL.PHONE');
+                                input.form-control(
+                                id="phone",
+                                type="tel",
+                                name="phone",
+                                placeholder=`${phonePlaceholder}`,
+                                aria-describedby="phone",
+                                required="true")
+                        .col-xs-12.col-sm-6.col-md-6.col-lg-6
+                            .form-group
+                                label(for="register-work-place") #{__('REGISTRATION_MODAL.WORK_PLACE')}
+                                - var registerWorkingPlacePlaceholder = __('REGISTRATION_MODAL.WORK_PLACE');
+                                input.form-control(
+                                id="register-work-place",
+                                type="text",
+                                name="register-work-place",
+                                placeholder=`${registerWorkingPlacePlaceholder}`,
+                                aria-describedby="working place",
+                                required="true")
+                    .row
+                        .col-xs-12.col-sm-6.col-md-6.col-lg-6
                             .row
-                                .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                                   .form-group
-                                        label(for="phone") #{__('THEMES_MODAL.PHONE')}
-                                        - var phonePlaceholder = __('THEMES_MODAL.PHONE');
-                                        input.form-control(id="phone", type="tel", name="phone" placeholder=`${phonePlaceholder}`, aria-describedby="phone", required="true")
                                 .col-xs-12.col-sm-12.col-md-12.col-lg-12
                                     .row
                                         .col-xs-12.col-sm-12.col-md-7.col-lg-7
@@ -53,5 +94,5 @@
                     button.btn.btn-default(id="register-pay-after" , type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
                     button.btn.btn-primary(id="register-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}
                 h5.pull-left(data-dismiss="modal") #{__('REGISTRATION_MODAL.AMOUNT_DUE')} :
-                     span(id="total-money")
+                    span(id="total-money")
 

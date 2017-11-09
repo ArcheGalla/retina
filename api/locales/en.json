@@ -83,7 +83,10 @@
     "DOCTOR": "Doctor",
     "ST_OR_INTERN": "Student or intern",
     "DINNER_INCLUDE": "With dinner include",
-    "AMOUNT_DUE": "Amount due"
+    "AMOUNT_DUE": "Amount due",
+    "COUNTRY": "Country",
+    "CITY": "City",
+    "WORK_PLACE": "Working place"
   },
   "CHOOSE_LANG": "UKR",
   "NAV_SCHEDULE": "Timetable",

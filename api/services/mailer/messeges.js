@@ -91,7 +91,7 @@ module.exports = {
 				Id: ${order_id}
 			`,
 			html: `
-				<h2>New incoming request for registration</h2>
+				<h2>New Successful registration</h2>
 				<ul>
 					<li>Name: ${client.name}</li>
 					<li>Email: ${client.email}</li>
