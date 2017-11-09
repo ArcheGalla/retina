@@ -53,26 +53,26 @@
     "DESC_ONE": "Symposium fees include: Free paper sessions, lectures, exhibition, participation in wetlab (with pre-registration), concert, lunches, coffee brakes and coffee with expert (with pre-registration)",
     "DESC_TWO": "Dinner and excursion are not included and is on additional payment.",
     "FOR_DOC": "For doctors",
-    "UAH": "UAH",
+    "UAH": "Euro",
     "FOR_STUDENTS": "For students",
     "REGISTER": "Register",
     "TO": "to",
     "CONFIRMATION": "A confirmation document (student id etc) must be provided",
     "PRICES": {
       "STEP_ONE": {
-        "DOC": "1000 Euro",
-        "STUDENT": "700 Euro",
-        "DINNER": "700 Euro"
+        "DOC": "60",
+        "STUDENT": "40",
+        "DINNER": "40"
       },
       "STEP_TWO": {
-        "DOC": "1200 Euro",
-        "STUDENT": "800 Euro",
-        "DINNER": "800 Euro"
+        "DOC": "70",
+        "STUDENT": "50",
+        "DINNER": "40"
       },
       "IN_PLACE": {
-        "DOC": "1400 Euro",
-        "STUDENT": "900 Euro",
-        "DINNER": "900 Euro"
+        "DOC": "80",
+        "STUDENT": "60",
+        "DINNER": "40"
       }
     }
   },

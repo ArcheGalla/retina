@@ -6,7 +6,6 @@ const ENV = require('../const/constant');
 const LiqPay = require('../lib/sdk-nodejs/lib/liqpay');
 
 const liqPaySdk = new LiqPay(ENV.LIQPAY_PUBLIC, ENV.LIQPAY_SECRET);
-const Mailer = require('../services/mailer');
 
 const Joi = require('joi');
 const { RequestClientSchema, SaveClientSchema } = require('../database/model/client');
@@ -18,16 +17,16 @@ const ClientsStore = require('../database/collections/clients');
 
 function validateMiddleWare(req, res, next) {
 		const client = req.body;
-
+		const languages = ['ua', 'en'];
 		const { lang } = req.query;
 
-		if (lang !== 'ua' || lang !== 'en') {
+		if (languages.indexOf(lang) === -1) {
 				return res.status(403).json({ lang: 'lang query param is missing' });
 		}
 
 		Joi.validate(client, RequestClientSchema, (err, value) => {
 				if (err) return res.status(403).json(err);
-				console.log('value ', value);
+
 				next();
 		});
 }
@@ -48,8 +47,6 @@ router.post('/', validateMiddleWare, function (req, res) {
 
 				ClientsStore.insert(client, function (err) {
 						if (err) return res.status(403).json(err);
-						// Mailer.sandNewRegistrationEmail(client, order_id);
-						// Mailer.sandNewRegistrationNotifyEmail(client);
 
 						// todo: check is ua lang fixed from liq pay side
 						const paymentDescription = lang === 'ua' ? uaTicket : enTicket;
@@ -74,6 +71,19 @@ router.post('/', validateMiddleWare, function (req, res) {
 								'sandbox': sandbox,
 								'result_url': resultUrl
 						});
+
+						console.log('PARAM',{
+								'action': 'pay',
+								'amount': ENV.NODE_ENV === 'development' ? '0.01' : amount,
+								'currency': currency,
+								'description': paymentDescription,
+								'language': language,
+								'order_id': orderId,
+								'version': '3',
+								'sandbox': sandbox,
+								'result_url': resultUrl
+						});
+
 
 						res.status(200).json(html);
 				});
