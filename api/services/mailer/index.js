@@ -36,8 +36,8 @@ module.exports = {
 			.verify()
 			.then(() => transporter.sendMail(message))
 	},
-	sandNewRegistrationNotifyEmail(client) {
-		const message = messageFactory.getNewRegistrationNotifyEmail(client);
+	sandNewRegistrationNotifyEmail(client, lang) {
+		const message = messageFactory.getNewRegistrationNotifyEmail(client, lang);
 
 		return transporter
 			.verify()

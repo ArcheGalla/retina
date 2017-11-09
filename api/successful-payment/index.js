@@ -7,8 +7,9 @@ const Mailer = require('../services/mailer');
 function validateMiddleWare(req, res, next) {
 		try {
 				const { paymentId } = req.body;
-				if (typeof paymentId !== 'string') {
-						return res.status(403).json(e);
+				const { lang } = req.query;
+				if (typeof paymentId !== 'string' || typeof lang !== 'string') {
+						return res.status(403).json({ message: 'params is invalid' });
 				}
 
 				next();
@@ -19,6 +20,7 @@ function validateMiddleWare(req, res, next) {
 
 router.post('/', validateMiddleWare, function (req, res) {
 		const { paymentId } = req.body;
+		const { lang } = req.query;
 
 		ClientsStore.findOne({ orderId: paymentId, paid: false }, function (err, client) {
 				if (err) return res.status(403).json(err);
@@ -32,10 +34,11 @@ router.post('/', validateMiddleWare, function (req, res) {
 
 				ClientsStore.update({ _id: _id }, clientUpdated, function (err, updated) {
 						if (err) return res.status(403).json(err);
+
 						console.log('clientUpdated', updated);
 
-						Mailer.sandNewRegistrationEmail(updated, updated.orderId);
-						Mailer.sandNewRegistrationNotifyEmail(client);
+						Mailer.sandNewRegistrationEmail(clientUpdated, clientUpdated.orderId);
+						Mailer.sandNewRegistrationNotifyEmail(clientUpdated, lang);
 
 						res.status(200).json({ status: '200', message: 'successful payment' });
 				});

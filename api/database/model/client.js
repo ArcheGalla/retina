@@ -9,7 +9,10 @@ const RequestClientSchema = Joi
 			message: Joi.string().required(),
 			position: Joi.string().required(),
 			dinner: Joi.boolean().required(),
-			amount: Joi.string().required(),
+			amount: Joi.number().required(),
+			country: Joi.string().required(),
+			city: Joi.string().required(),
+			work: Joi.string().required(),
 	});
 
 const SaveClientSchema = Joi
@@ -21,7 +24,10 @@ const SaveClientSchema = Joi
 			message: Joi.string().required(),
 			position: Joi.string().required(),
 			dinner: Joi.boolean().required(),
-			amount: Joi.string().required(),
+			amount: Joi.number().required(),
+			country: Joi.string().required(),
+			city: Joi.string().required(),
+			work: Joi.string().required(),
 
 			// beck end stuff
 			orderId: Joi.string().required(),
