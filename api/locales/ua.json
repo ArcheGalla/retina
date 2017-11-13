@@ -62,17 +62,17 @@
       "STEP_ONE": {
         "DOC": "1000",
         "STUDENT": "700",
-        "DINNER": "700"
+        "DINNER": "900"
       },
       "STEP_TWO": {
         "DOC": "1200",
         "STUDENT": "800",
-        "DINNER": "800"
+        "DINNER": "1100"
       },
       "IN_PLACE": {
         "DOC": "1400",
         "STUDENT": "900",
-        "DINNER": "900"
+        "DINNER": " "
       }
     }
   },

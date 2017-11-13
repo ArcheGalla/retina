@@ -45,9 +45,9 @@ class MoneyCalculusUa {
 		this.internSecondPrice = 800;
 		this.internThirdPrice = 900;
 
-		this.dinnerPrice = 700;
-		this.dinnerSecondPrice = 800;
-		this.dinnerThirdPrice = 900;
+		this.dinnerPrice = 900;
+		this.dinnerSecondPrice = 1100;
+		this.dinnerThirdPrice = 1100;
 	}
 
 	render(total) {
@@ -84,10 +84,6 @@ class ModelCalculusEng {
 	constructor(dc) {
 		this.dc = dc;
 		this.counterView = $('#total-money');
-
-		//this.docPrice = 70;
-		//this.internPrice = 50;
-		//this.dinnerPrice = 40;
 
 			this.docPrice = 60;
 			this.docSecondPrice = 70;
