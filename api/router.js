@@ -8,24 +8,29 @@ const { result_photo, result_video, result_record } = headerData;
 let script = 'bundle.js';
 let style = '';
 
+const dayOne = require('./schedule/day_one.json');
+const dayTwo = require('./schedule/day_two.json');
+
 if (production) {
-	const manifest = require('../public/dist/manifest.json');
-	const { assets } = manifest;
-	script = assets['bundle.js'];
-	style = assets['bundle.css'];
+		const manifest = require('../public/dist/manifest.json');
+		const { assets } = manifest;
+		script = assets['bundle.js'];
+		style = assets['bundle.css'];
 }
 
 router.get('/', function (req, res) {
-	res.render('index', {
-		__: res.__,
-		lang: req.locale,
-		production,
-		script,
-		style,
-		result_photo,
-		result_video,
-		result_record
-	});
+		res.render('index', {
+				__: res.__,
+				lang: req.locale,
+				production,
+				script,
+				style,
+				result_photo,
+				result_video,
+				result_record,
+				dayOne,
+				dayTwo
+		});
 });
 
 module.exports = router;

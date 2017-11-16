@@ -1,0 +1,57 @@
+[
+  {
+    "icon": "fa fa-pencil-square-o",
+    "text": "SCHEDULE_ONE.1",
+    "time": "9:00"
+  },
+  {
+    "icon": "fa fa-university",
+    "text": "SCHEDULE_ONE.2",
+    "time": "9:45"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.3",
+    "time": "10:00 - 11:30"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.4",
+    "time": "11:30 - 12:00"
+  },
+  {
+    "icon": "fa fa-coffee",
+    "text": "SCHEDULE_ONE.5",
+    "time": "12:00 - 13:45"
+  },
+  {
+    "icon": "fa fa-users",
+    "text": "SCHEDULE_ONE.6",
+    "time": "13:45 - 14:45"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.7",
+    "time": "14:45 - 15:15"
+  },
+  {
+    "icon": "fa fa-cutlery",
+    "text": "SCHEDULE_ONE.8",
+    "time": "15:30 - 17:00"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.9",
+    "time": "17:00 - 17:30"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.10",
+    "time": "17:30-19:00 "
+  },
+  {
+    "icon": "fa fa-cutlery",
+    "text": "SCHEDULE_ONE.11",
+    "time": "19:30"
+  }
+]

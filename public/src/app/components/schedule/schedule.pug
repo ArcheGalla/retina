@@ -2,28 +2,30 @@
     .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
             h2.section-heading Розклад
-    .schedule
-        .item(repeat)
-            .row
-                .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
-                    i.fa(class='{{ item.icon}}')
-                .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase {{ item.text | translate }}
-                .col-lg-3.col-md-4.col-sm-4.col-xs-6 {{item.time}}.item(repeat)
-            .row
-                .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
-                    i.fa(class='{{ item.icon}}')
-                .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase {{ item.text | translate }}
-                .col-lg-3.col-md-4.col-sm-4.col-xs-6 {{item.time}}.item(repeat)
-            .row
-                .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
-                    i.fa(class='{{ item.icon}}')
-                .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase {{ item.text | translate }}
-                .col-lg-3.col-md-4.col-sm-4.col-xs-6 {{item.time}}.item(repeat)
-            .row
-                .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
-                    i.fa(class='{{ item.icon}}')
-                .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase {{ item.text | translate }}
-                .col-lg-3.col-md-4.col-sm-4.col-xs-6 {{item.time}}
+.container-fluid
+    .row
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+            h4(class='text-center') #{__('SCHEDULE_ONE.TITLE')}
+            .schedule
+                each item in dayOne
+                    .item
+                        .row
+                            .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
+                                i.fa(class=`${item.icon}`)
+                            .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase #{__(item.text)}
+                            .col-lg-3.col-md-4.col-sm-4.col-xs-6 #{item.time}
+
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+            h4(class='text-center') #{__('SCHEDULE_TWO.TITLE')}
+            .schedule
+                each itemTwo in dayTwo
+                    .item
+                        .row
+                            .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
+                                i.fa(class=`${itemTwo.icon}`)
+                            .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase #{__(itemTwo.text)}
+                            .col-lg-3.col-md-4.col-sm-4.col-xs-6 #{itemTwo.time}
+.container
     .row
         .col-lg-8.col-lg-offset-2.text-center
             p.large.text-muted

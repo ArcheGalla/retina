@@ -3,13 +3,13 @@ $radius: 9px;
 .schedule {
   border-radius: $radius;
   margin: 20px auto;
-  width: 80%;
+  width: 98%;
   font-size: 1.4em;
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
   0 25px 55px 0 rgba(0, 0, 0, 0.21);
 
   .item {
-    width: 100%;
+    // width: 100%;
     min-height: 50px;
     line-height: 49px;
     .icon {
