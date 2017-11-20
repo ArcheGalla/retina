@@ -14,8 +14,8 @@ nav.navbar.navbar-default.navbar-fixed-top
                 //    a.page-scroll(href='#contact') #{__('HEADER.NAV_PARTNERS')}
                 //li
                 //    a.page-scroll.text-bold(href='#about') #{__('HEADER.NAV_ABOUT')}
-                //li
-                //    a.page-scroll(href='#schedule') #{__('NAV_SCHEDULE')}
+                li
+                    a.page-scroll(href='#schedule') #{__('HEADER.NAV_SCHEDULE')}
                 //li
                 //    a.page-scroll(href='#registration') #{__('NAV_REGISTRATION')}
 
@@ -26,7 +26,7 @@ nav.navbar.navbar-default.navbar-fixed-top
                 li
                     a.page-scroll(href='#contact') #{__('HEADER.NAV_CONTACTS')}
                 li
-                    a.text-right.lang(href=`/?lang=${ lang === 'ua' ? 'en': 'ua' }`) #{__('CHOOSE_LANG')}
+                    a.text-right.lang(href=`/?lang=${ lang === 'ua' ? 'en': 'ua' }`) #{__('HEADER.CHOOSE_LANG')}
 
 header(id="header")
     .container

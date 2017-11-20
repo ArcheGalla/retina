@@ -1,12 +1,17 @@
 [
   {
     "icon": "fa fa-microphone",
-    "text": "SCHEDULE_TWO.1",
-    "time": "9:00 - 10:30"
+    "text": "SMALL_HOL.1",
+    "time": "9:00 – 10:30"
   },
   {
     "icon": "fa fa-microphone",
-    "text": "SCHEDULE_TWO.2",
-    "time": "10:30 - 12:00"
+    "text": "SMALL_HOL.2",
+    "time": "10:00 – 17:00"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SMALL_HOL.3",
+    "time": "9:00 – 18:00"
   }
 ]

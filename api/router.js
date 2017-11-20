@@ -10,6 +10,7 @@ let style = '';
 
 const dayOne = require('./schedule/day_one.json');
 const dayTwo = require('./schedule/day_two.json');
+const dayTwoSmall = require('./schedule/day_two_small.json');
 
 if (production) {
 		const manifest = require('../public/dist/manifest.json');
@@ -29,7 +30,8 @@ router.get('/', function (req, res) {
 				result_video,
 				result_record,
 				dayOne,
-				dayTwo
+				dayTwo,
+				dayTwoSmall
 		});
 });
 

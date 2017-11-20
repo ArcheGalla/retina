@@ -1,4 +1,4 @@
-.container
+.container(id="schedule")
     .row
         .col-lg-12.col-md-12.col-sm-12.col-xs-12.text-center
             h2.section-heading Розклад
@@ -25,7 +25,19 @@
                                 i.fa(class=`${itemTwo.icon}`)
                             .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase #{__(itemTwo.text)}
                             .col-lg-3.col-md-4.col-sm-4.col-xs-6 #{itemTwo.time}
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            h4(class='text-center') #{__('SMALL_HOL.TITLE')}
+            .schedule
+                each itemSmall in dayTwoSmall
+                    .item
+                        .row
+                            .col-lg-2.col-md-2.col-sm-2.hidden-xs.icon
+                                i.fa(class=`${itemSmall.icon}`)
+                            .col-lg-7.col-md-6.col-sm-6.col-xs-6.text-uppercase #{__(itemSmall.text)}
+                            .col-lg-3.col-md-4.col-sm-4.col-xs-6 #{itemSmall.time}
 .container
     .row
         .col-lg-8.col-lg-offset-2.text-center
             p.large.text-muted
+.container
+    hr
