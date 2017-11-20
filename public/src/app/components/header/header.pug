@@ -41,8 +41,12 @@ header(id="header")
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
                 a.page-scroll(href="#about")
                     .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_ABOUT')}
-                .btn.btn-default.btn-xl.nav-btnee(disabled="true") #{__('HEADER.BTN_PROGRAM')}
+
+                a.page-scroll(href='#schedule')
+                    .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_PROGRAM')}
+
                 .btn.btn-default.btn-xl.nav-btnee(data-toggle="modal", data-target="#registration-modal") #{ __('HEADER.BTN_REGISTRATION') }
+
                 a.page-scroll(href="#contact")
                     .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_LOCATION')}
 
