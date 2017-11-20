@@ -1,52 +1,47 @@
 [
   {
-    "icon": "fa fa-pencil-square-o",
+    "icon": "fa fa-microphone",
     "text": "SCHEDULE_TWO.1",
-    "time": "9:00"
+    "time": "9:00 - 10:30"
   },
   {
-    "icon": "fa fa-university",
+    "icon": "fa fa-microphone",
     "text": "SCHEDULE_TWO.2",
-    "time": "9:45"
-  },
-  {
-    "icon": "fa fa-microphone",
-    "text": "SCHEDULE_TWO.3",
-    "time": "10:00 - 11:30"
-  },
-  {
-    "icon": "fa fa-microphone",
-    "text": "SCHEDULE_TWO.4",
-    "time": "11:30 - 12:00"
+    "time": "10:30 - 12:00"
   },
   {
     "icon": "fa fa-coffee",
-    "text": "SCHEDULE_TWO.5",
-    "time": "12:00 - 13:45"
+    "text": "SCHEDULE_TWO.3",
+    "time": "12:00 - 12:45"
   },
   {
     "icon": "fa fa-users",
+    "text": "SCHEDULE_TWO.4",
+    "time": "12:45 – 13:45"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_TWO.5",
+    "time": "13:45 – 14:30"
+  },
+  {
+    "icon": "fa fa-cutlery",
     "text": "SCHEDULE_TWO.6",
-    "time": "13:45 - 14:45"
+    "time": "14:30 – 15:15"
   },
   {
     "icon": "fa fa-microphone",
     "text": "SCHEDULE_TWO.7",
-    "time": "14:45 - 15:15"
+    "time": "15:15 - 16:15"
   },
   {
-    "icon": "fa fa-cutlery",
+    "icon": "fa fa-microphone",
     "text": "SCHEDULE_TWO.8",
-    "time": "15:30 - 17:00"
+    "time": "16:15 – 17:45"
   },
   {
-    "icon": "fa fa-microphone",
+    "icon": "fa fa-users",
     "text": "SCHEDULE_TWO.9",
-    "time": "17:00 - 17:30"
-  },
-  {
-    "icon": "fa fa-microphone",
-    "text": "SCHEDULE_TWO.10",
-    "time": "17:30-19:00 "
+    "time": "18:15 – 18:00"
   }
 ]
