@@ -88,11 +88,16 @@
                                 label(for="phone") #{__('REGISTRATION_MODAL.DESCRIPTION')}
                                 - var messagePlaceholder = __('REGISTRATION_MODAL.DESCRIPTION');
                                 textarea.form-control(id="message", name="message" placeholder=`${messagePlaceholder}`, aria-describedby="message", rows="4", width="100%")
-            .modal-footer
+            .modal-footer.registration-modal-footer
+                h5.amount-due(data-dismiss="modal") #{__('REGISTRATION_MODAL.AMOUNT_DUE')} :
+                    span(id="total-money")
+  
+                span.finish-message
+                    span(id="finish-message") #{__('REGISTRATION_MODAL.FINISH_REGISTRATION')}
+                
                 span(id='pay-insert-area')
+                
                 span(id='pay-hide-area')
                     button.btn.btn-default(id="register-pay-after" , type="button", data-dismiss="modal") #{__('THEMES_MODAL.CLOSE')}
                     button.btn.btn-primary(id="register-submit", type="submit") #{__('REGISTRATION_MODAL.REGISTER')}
-                h5.pull-left(data-dismiss="modal") #{__('REGISTRATION_MODAL.AMOUNT_DUE')} :
-                    span(id="total-money")
-
+                

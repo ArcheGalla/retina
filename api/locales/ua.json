@@ -89,7 +89,8 @@
     "AMOUNT_DUE": "Сума до сплати",
     "COUNTRY": "Країна",
     "CITY": "Місто",
-    "WORK_PLACE": "Місце роботи"
+    "WORK_PLACE": "Місце роботи",
+    "FINISH_REGISTRATION": "Для завершення реєстрації здійсність оплату"
   },
 
   "SCHEDULE_ONE": {

@@ -89,7 +89,8 @@
     "AMOUNT_DUE": "Amount due",
     "COUNTRY": "Country",
     "CITY": "City",
-    "WORK_PLACE": "Working place"
+    "WORK_PLACE": "Working place",
+    "FINISH_REGISTRATION": "To complete the registration, make payment"
   },
   "SCHEDULE_ONE": {
     "TITLE": "Friday 4/05/2018",

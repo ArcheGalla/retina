@@ -179,6 +179,7 @@ $(form).submit(function (event) {
 		.then(response => response.data)
 		.then(payBtn => {
 			submit.attr('disabled', false);
+			$('#finish-message').css({display : 'flex'});
 			$('#pay-hide-area').hide();
 			$('#pay-insert-area').append(payBtn);
 		})
@@ -192,6 +193,7 @@ function onRegisterModalOpen() {
 
 function onRegisterModalClose() {
 	$('#register-form')[0].reset();
+	$('#finish-message').css({ display : 'none' });
 
 	const forms = document.querySelectorAll('#pay-insert-area > form');
 
