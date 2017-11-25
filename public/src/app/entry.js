@@ -20,6 +20,7 @@ import './components/theses/theses';
 import './components/location/location';
 import './components/registration/registration';
 import './components/schedule/schedule';
+import './components/partners/partners';
 
 // self work services
 import './services/successful-payment';

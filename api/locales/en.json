@@ -124,6 +124,13 @@
     "2": "Wetlab every hour",
     "3": "Exhibition"
   },
+  "PARTNERS": {
+    "TITLE": "Partners"
+  },
+  "SCHEDULE": {
+    "TITLE": "Timetable"
+  },
+
   "NAV_REGISTRATION": "Registration",
   "DEAR_COLLEAGUES": "Dear colleagues",
   "INTRO_TEXT_1": "We sincerely invite you to take participation in the second symposium \"Retina-Lviv 2018\" (innovations and controversies in vitrеoretinal surgery).",
@@ -158,7 +165,6 @@
   "SESSION_TEXT_6": "What vitreo-retinal surgeon can do?",
   "SESSION_TITLE_5": "Your theme",
   "SESSION_TEXT_5": "or a separate report",
-  "SCHEDULE": "timetable",
   "SCHEDULE_1": "Registration",
   "SCHEDULE_2": "Opening the symposium",
   "SCHEDULE_3": "Ι session",
