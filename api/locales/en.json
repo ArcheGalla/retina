@@ -80,6 +80,7 @@
     }
   },
   "REGISTRATION_MODAL": {
+    "NAME_SECOND_NAME": "Name & Surname",
     "TITLE": "Registration",
     "REGISTER": "Register",
     "DESCRIPTION": "Message",
@@ -119,7 +120,7 @@
     "9": "Rewarding, end of symposium"
   },
   "SMALL_HOL": {
-    "TITLE" : "Saturday 5/05/2018. Small conference hall",
+    "TITLE": "Saturday 5/05/2018. Small conference hall",
     "1": "Student’s ophthalmological conference",
     "2": "Wetlab every hour",
     "3": "Exhibition"
@@ -130,7 +131,6 @@
   "SCHEDULE": {
     "TITLE": "Timetable"
   },
-
   "NAV_REGISTRATION": "Registration",
   "DEAR_COLLEAGUES": "Dear colleagues",
   "INTRO_TEXT_1": "We sincerely invite you to take participation in the second symposium \"Retina-Lviv 2018\" (innovations and controversies in vitrеoretinal surgery).",
