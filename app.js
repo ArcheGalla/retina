@@ -8,7 +8,7 @@ const path = require('path');
 const i18n = require('i18n');
 const api = require('./api/api');
 const app = express();
-
+const cors = require('cors');
 const envConstants = require('./api/const/constant');
 
 i18n.configure({
@@ -27,6 +27,7 @@ i18n.configure({
 });
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
