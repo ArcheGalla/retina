@@ -5,16 +5,8 @@ import $ from 'jquery';
 
 class DateChecker {
 	constructor() {
-		const first = new Date();
-		const second = new Date();
-
-		first.setYear(2017);
-		first.setMonth(12);
-		first.setDate(31);
-
-		second.setYear(2018);
-		second.setMonth(3);
-		second.setDate(31);
+		const first = new Date(Date.UTC(2017, 11, 31));
+		const second = new Date(Date.UTC(2018, 2, 31));
 
 		this.firstBarrer = first.getTime();
 		this.secondBarrer = second.getTime();
