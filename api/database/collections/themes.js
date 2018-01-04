@@ -4,7 +4,8 @@ const storageLocation = require('../../const/constant').NEDB_PATH;
 
 const Themes = new Store({
 		filename: path.join(storageLocation, 'themes.db'),
-		autoload: true
+		timestampData: true,
+		autoload: true,
 });
 
 module.exports = Themes;

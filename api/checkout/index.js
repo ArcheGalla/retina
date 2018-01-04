@@ -72,17 +72,17 @@ router.post('/', validateMiddleWare, function (req, res) {
 								'result_url': resultUrl
 						});
 
-						console.log('PARAM',{
-								'action': 'pay',
-								'amount': ENV.NODE_ENV === 'development' ? '0.01' : amount,
-								'currency': currency,
-								'description': paymentDescription,
-								'language': language,
-								'order_id': orderId,
-								'version': '3',
-								'sandbox': sandbox,
-								'result_url': resultUrl
-						});
+						//console.log('PARAM',{
+						//		'action': 'pay',
+						//		'amount': ENV.NODE_ENV === 'development' ? '0.01' : amount,
+						//		'currency': currency,
+						//		'description': paymentDescription,
+						//		'language': language,
+						//		'order_id': orderId,
+						//		'version': '3',
+						//		'sandbox': sandbox,
+						//		'result_url': resultUrl
+						//});
 
 
 						res.status(200).json(html);
