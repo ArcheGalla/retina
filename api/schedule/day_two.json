@@ -43,5 +43,15 @@
     "icon": "fa fa-users",
     "text": "SCHEDULE_TWO.9",
     "time": "18:15 – 18:00"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_TWO.10",
+    "time": "10:00 – 17:00"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_TWO.11",
+    "time": "9:00 – 18:00"
   }
 ]

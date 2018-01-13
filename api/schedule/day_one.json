@@ -53,5 +53,15 @@
     "icon": "fa fa-cutlery",
     "text": "SCHEDULE_ONE.11",
     "time": "19:30"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.12",
+    "time": "10:00 – 17:00"
+  },
+  {
+    "icon": "fa fa-microphone",
+    "text": "SCHEDULE_ONE.13",
+    "time": "9:00 – 18:00"
   }
 ]

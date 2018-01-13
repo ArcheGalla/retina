@@ -105,7 +105,9 @@
     "8": "Lunch",
     "9": "Presentation of complex cases",
     "10": "Laser coagulation in retina diseases",
-    "11": "Gala dinner"
+    "11": "Gala dinner",
+    "12": "Wetlab every hour",
+    "13": "Exhibition"
   },
   "SCHEDULE_TWO": {
     "TITLE": "Saturday 5/05/2018",
@@ -117,13 +119,13 @@
     "6": "Lunch",
     "7": "Short questions and answers",
     "8": "Vitreoretinal surgery for eye injury",
-    "9": "Rewarding, end of symposium"
+    "9": "Rewarding, end of symposium",
+    "10": "Wetlab every hour",
+    "11": "Exhibition"
   },
   "SMALL_HOL": {
     "TITLE": "Saturday 5/05/2018. Small conference hall",
-    "1": "Student’s ophthalmological conference",
-    "2": "Wetlab every hour",
-    "3": "Exhibition"
+    "1": "Student’s ophthalmological conference"
   },
   "PARTNERS": {
     "TITLE": "Partners"
