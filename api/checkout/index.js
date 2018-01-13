@@ -10,8 +10,8 @@ const liqPaySdk = new LiqPay(ENV.LIQPAY_PUBLIC, ENV.LIQPAY_SECRET);
 const Joi = require('joi');
 const { RequestClientSchema, SaveClientSchema } = require('../database/model/client');
 
-const uaTicket = 'Retina Lviv 2017 - квиток';
-const enTicket = 'Retina Lviv 2017 - tickets';
+const uaTicket = 'Retina Lviv 2018 - квиток';
+const enTicket = 'Retina Lviv 2018 - tickets';
 
 const ClientsStore = require('../database/collections/clients');
 
