@@ -15,9 +15,6 @@
     "staging": "cross-env NODE_ENV=production PORT=3000; node ./bin/www"
   },
   "dependencies": {
-    "@types/joi": "^10.4.4",
-    "@types/nedb": "^1.8.5",
-    "@types/nodemailer": "^4.2.1",
     "axios": "^0.17.0",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
@@ -47,8 +44,9 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "jasmine": "^2.8.0",
+    "@types/joi": "^10.4.4",
+    "@types/nedb": "^1.8.5",
+    "@types/nodemailer": "^4.2.1",
     "assets-webpack-plugin": "^3.4.0",
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.14.0",
