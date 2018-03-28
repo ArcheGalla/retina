@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "bin": {
-    "nodemon": "node_modules/.bin/nodemon"
+    "nodemon": "node_modules/.bin/nodemon",
+    "cross-env": "node_modules/.bin/cross-env"
   },
   "scripts": {
     "start": "nodemon --config ./nodemon.json ./bin/www",
