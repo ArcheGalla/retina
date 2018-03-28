@@ -3,17 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "bin": {
-    "nodemon": "node_modules/.bin/nodemon",
-    "cross-env": "node_modules/.bin/cross-env"
+    "nodemon": "node_modules/.bin/nodemon"
   },
   "scripts": {
     "start": "nodemon --config ./nodemon.json ./bin/www",
-    "start:watch:server": "cross-env NODE_ENV=production PORT=3000 STORAGE=$HOME/.retina_home nodemon --config ./nodemon.json ./bin/www",
+    "start:watch:server": "export NODE_ENV=production; export PORT=3000; export STORAGE=$HOME/.retina_home; nodemon --config ./nodemon.json ./bin/www",
     "start:prod": "npm run build; npm run launch",
-    "launch": "cross-env NODE_ENV=production STORAGE=$HOME/.retina_home node ./bin/www",
+    "launch": "export NODE_ENV=production; export STORAGE=$HOME/.retina_home; node ./bin/www",
     "test": "echo test pass",
-    "build": "cross-env NODE_ENV=production webpack --config ./public/webpack.config.js --colors",
-    "staging": "cross-env NODE_ENV=production PORT=3000; node ./bin/www"
+    "build": "export NODE_ENV=production; webpack --config ./public/webpack.config.js --colors",
+    "staging": "export NODE_ENV=production; PORT=3000; node ./bin/www"
   },
   "dependencies": {
     "axios": "^0.17.0",
@@ -58,7 +57,6 @@
     "babel-preset-stage-1": "^6.16.0",
     "clean-webpack-plugin": "^0.1.10",
     "copy-webpack-plugin": "^4.1.0",
-    "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "es6-promise": "^4.0.3",
     "eslint": "^4.8.0",
