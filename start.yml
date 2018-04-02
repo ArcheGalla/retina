@@ -1,5 +1,6 @@
 apps:
   name: retina
+  exec_mode: fork
   script: ./bin/www
   watch: false
   instances: 1
