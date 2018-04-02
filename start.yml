@@ -1,6 +1,6 @@
 apps:
   name: retina
-  exec_mode: fork
   script: ./bin/www
-  watch: false
+  watch: true
   instances: 1
+  port: 3000
