@@ -21,9 +21,9 @@ i18n.configure({
 	updateFiles: false,
 	queryParameter: 'lang',
 	preserveLegacyCase: true,
-	logDebugFn: (info) => console.log('i18n log debug info ', info),
-	logWarnFn: (warning) => console.log('i18n log warning info ', warning),
-	logErrorFn: (Error) => console.log('i18n log error info ', error),
+	// logDebugFn: (info) => console.log('i18n log debug info ', info),
+	// logWarnFn: (warning) => console.log('i18n log warning info ', warning),
+	// logErrorFn: (Error) => console.log('i18n log error info ', error),
 });
 
 app.use(logger('dev'));
@@ -68,28 +68,28 @@ app.use(function (req, res, next) {
 	next(err);
 });
 
-app.use(function (err, req, res, next) {
-	let responseData;
-
-	if (err.name === 'JsonSchemaValidation') {
-		res.status(400);
-		responseData = {
-			statusText: 'Bad Request',
-			jsonSchemaValidation: true,
-			validations: err.validations
-		};
-		// Take into account the content type if your app serves various content types
-		//if (req.xhr || req.get('Content-Type') === 'application/json') {
-		//	res.json(responseData);
-		//} else {
-		// If this is an html request then you should probably have
-		// some type of Bad Request html template to respond with
-		//res.render('badrequestTemplate', responseData);
-		//}
-	} else {
-		next(err);
-	}
-});
+// app.use(function (err, req, res, next) {
+// 	let responseData;
+//
+// 	if (err.name === 'JsonSchemaValidation') {
+// 		res.status(400);
+// 		responseData = {
+// 			statusText: 'Bad Request',
+// 			jsonSchemaValidation: true,
+// 			validations: err.validations
+// 		};
+// 		// Take into account the content type if your app serves various content types
+// 		//if (req.xhr || req.get('Content-Type') === 'application/json') {
+// 		//	res.json(responseData);
+// 		//} else {
+// 		// If this is an html request then you should probably have
+// 		// some type of Bad Request html template to respond with
+// 		//res.render('badrequestTemplate', responseData);
+// 		//}
+// 	} else {
+// 		next(err);
+// 	}
+// });
 
 app.use(function (err, req, res) {
 	res.locals.message = err.message;
@@ -101,4 +101,7 @@ app.use(function (err, req, res) {
 app.set('views', path.join(__dirname, 'public/src'));
 app.set('view engine', 'pug');
 
-module.exports = app;
+app.listen(envConstants.PORT, function () {
+	// eslint-disable-next-line no-console
+	console.log(`App is started on ${envConstants.PORT}`);
+});

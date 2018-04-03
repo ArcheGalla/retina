@@ -9,7 +9,7 @@
     "start": "nodemon --config ./nodemon.json ./bin/www",
     "start:watch:server": "export NODE_ENV=production; export PORT=3000; export STORAGE=$HOME/.retina_home; nodemon --config ./nodemon.json ./bin/www",
     "start:prod": "npm run build; npm run launch",
-    "launch": "export NODE_ENV=production;  export PORT=3000; export STORAGE=$HOME/.retina_home; node ./bin/www",
+    "launch": "export NODE_ENV=production; node app.js",
     "test": "echo test pass",
     "build": "export NODE_ENV=production; webpack --config ./public/webpack.config.js --colors",
     "staging": "export NODE_ENV=production; PORT=3000; node ./bin/www"
