@@ -1,6 +1,6 @@
 apps:
   name: retina
-  script: ./bin/www
+  script: ./app.js
   watch: true
   instances: 1
   port: 3000
