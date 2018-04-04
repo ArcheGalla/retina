@@ -45,8 +45,11 @@ header(id="header")
                 a.page-scroll(href='#schedule')
                     .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_PROGRAM')}
 
-                .btn.btn-default.btn-xl.nav-btnee.disabled(data-toggle="tooltip" data-placement="top" title="Реєстрація закрита") #{ __('HEADER.BTN_REGISTRATION') }
-                //    (data-toggle="modal", data-target="#registration-modal")
+                if lang === 'ua'
+                    .btn.btn-default.btn-xl.nav-btnee.disabled(data-toggle="tooltip" data-placement="top" title="Реєстрація закрита") #{ __('HEADER.BTN_REGISTRATION') }
+                    //    (data-toggle="modal", data-target="#registration-modal")
+                else
+                    .btn.btn-default.btn-xl.nav-btnee(data-toggle="modal", data-target="#registration-modal" title="Реєстрація закрита") #{ __('HEADER.BTN_REGISTRATION') }
 
                 a.page-scroll(href="#contact")
                     .btn.btn-default.btn-xl.nav-btnee #{__('HEADER.BTN_LOCATION')}
